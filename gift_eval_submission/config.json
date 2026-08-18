@@ -1,6 +1,6 @@
 {
     "model": "TinyCast",
-    "model_type": "pretrained",
+    "model_type": "zero-shot",
     "model_dtype": "bfloat16",
     "model_link": "https://huggingface.co/raws-labs/tinycast",
     "code_link": "https://github.com/raws-labs/tinycast/blob/main/notebooks/tinycast.ipynb",
