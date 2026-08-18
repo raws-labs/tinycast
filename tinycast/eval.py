@@ -350,7 +350,7 @@ def summarize_by_freq_bin(
     over configurations of the ratio between a column and the same column of the
     seasonal-naive reference. ``ngmase`` normalizes MASE (point accuracy),
     ``ncrps`` normalizes the mean weighted sum quantile loss (probabilistic
-    accuracy, spelled ``nwql`` on the leaderboard and carried under both keys),
+    accuracy, the leaderboard's CRPS column, carried under both keys),
     and ``nmsis`` normalizes MSIS (interval score).
 
     ``write_sidecar`` (default off) additionally writes the returned summary to
