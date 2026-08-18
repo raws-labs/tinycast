@@ -1,0 +1,71 @@
+{
+ "_what": "Cluster and configuration bootstrap for the detector-off retrain against the MEAN of the three shipped-recipe 8-checkpoint soups, the contrast Section 4 reports. Positive = detector-off worse.",
+ "_statistic": "geomean(arm/ref) - mean over the three seeds of geomean(shipped_s/ref); all four arms resampled on the same drawn configuration set",
+ "_normalizer": "evidence/gift_eval_runs/_seasonal_naive_reference.csv",
+ "_convention": "8-checkpoint soup, every arm, the convention the manuscript quotes",
+ "_cluster_unit": "base dataset, the first path component of the configuration id",
+ "bootstrap": {
+  "B": 20000,
+  "seed_config": 20260729,
+  "seed_cluster": 20260730,
+  "interval": "percentile, 95%"
+ },
+ "arms": {
+  "detector_off": "detector-off-seed42-soup.csv",
+  "shipped": [
+   "shipped-seed42-soup.csv",
+   "shipped-seed43-soup.csv",
+   "shipped-seed44-soup.csv"
+  ]
+ },
+ "metrics": {
+  "nGMASE": {
+   "n_configs": 97,
+   "n_clusters": 28,
+   "level_detector_off": 0.7814012228154236,
+   "level_mean_of_three": 0.7743295239037135,
+   "per_seed_levels": {
+    "shipped-seed42-soup.csv": 0.7738351062363672,
+    "shipped-seed43-soup.csv": 0.774453535809498,
+    "shipped-seed44-soup.csv": 0.7746999296652752
+   },
+   "delta": 0.0070716989117101114,
+   "config": {
+    "lo": -0.0003958242837743539,
+    "hi": 0.014831328977649754,
+    "spans_zero": true,
+    "p": 0.06309684515774211
+   },
+   "cluster": {
+    "lo": -0.0012640876603378036,
+    "hi": 0.017717420478856643,
+    "spans_zero": true,
+    "p": 0.10389480525973702
+   }
+  },
+  "nWQL": {
+   "n_configs": 97,
+   "n_clusters": 28,
+   "level_detector_off": 0.5483102861397534,
+   "level_mean_of_three": 0.5441081362298156,
+   "per_seed_levels": {
+    "shipped-seed42-soup.csv": 0.5454623116992472,
+    "shipped-seed43-soup.csv": 0.5436123474520504,
+    "shipped-seed44-soup.csv": 0.543249749538149
+   },
+   "delta": 0.004202149909937836,
+   "config": {
+    "lo": -0.0006202591068466711,
+    "hi": 0.00876901952527304,
+    "spans_zero": true,
+    "p": 0.08529573521323934
+   },
+   "cluster": {
+    "lo": -0.0004708209904872251,
+    "hi": 0.008888604452189345,
+    "spans_zero": true,
+    "p": 0.07529623518824059
+   }
+  }
+ }
+}

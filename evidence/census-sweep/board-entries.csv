@@ -1,0 +1,105 @@
+entry,board_model,model_type,testdata_leakage,org,replication_code_available,n_configurations,nGMASE,nCRPS,nMSIS,census_disposition,disposition_basis,parameters,parameters_source
+CHARM,CHARM,zero-shot,No,C3 AI,No,97,0.7582,0.4776,0.4396,excluded: size cannot be established,no weight files in its released repository,,not establishable
+CastStar,CastStar,agentic,No,USTC-AGI,Yes,97,0.6705,0.4581,0.3934,out of scope: agentic or ensemble entry,its own board metadata,,
+Chronos_small,Chronos_small,pretrained,Yes,AWS AI Labs,Yes,97,0.8917,0.6630,1.0690,excluded: declares test-data leakage,its own board metadata,,
+CleanTS-65M,CleanTS-65M,zero-shot,No,Shandong University,Yes,97,0.7981,0.5433,0.5250,excluded: above the 10M cut,2026-07-23 sweep,,verified above the cut in the sweep; count not recorded per entry
+Cobra-Agent,Cobra-Agent,agentic,No,Dalpha AI,No,97,0.6782,0.4624,0.3889,out of scope: agentic or ensemble entry,its own board metadata,,
+Credence,Credence,agentic,No,ContinualIST,Yes,97,0.6907,0.4722,0.3960,out of scope: agentic or ensemble entry,its own board metadata,,
+DLinear,DLinear,deep-learning,No,The Chinese University of Hong Kong,No,97,1.0608,0.8456,2.8414,out of scope: per-dataset supervised,its own board metadata,,
+DeOSAlphaTimeGPTPredictor-2025,DeOSAlphaTimeGPTPredictor-2025,zero-shot,No,vencortex®,No,97,0.6815,0.4663,0.3972,excluded: size cannot be established,no weight files in its released repository,,not establishable
+FFM,FFM,deep-learning,No,IBM Research,No,97,1.0169,0.7038,0.5897,out of scope: per-dataset supervised,its own board metadata,,
+FLAIR,FLAIR,statistical,No,Mellon Inc.,Yes,97,0.8384,0.5871,0.5376,out of scope: fitted per series at inference,its own board metadata,,
+Falcon-2.0,Falcon-2.0,pretrained,No,ant-intl,Yes,97,0.6660,0.4863,0.6076,excluded: above the 10M cut,2026-07-23 sweep,2490000000,the only released Falcon-TST checkpoint
+Falcon-X,Falcon-X,pretrained,No,ant-intl,Yes,97,0.6873,0.4857,0.4911,excluded: above the 10M cut,2026-07-23 sweep,2490000000,links the same repository as Falcon-2.0
+FlowState-9.1M,FlowState-9.1M,zero-shot,No,IBM Research,Yes,97,0.7262,0.5019,0.5632,admitted to the census,at or below the 10M cut,9069312,"released safetensors, r1.0"
+FlowState-r1.1,FlowState-r1.1,zero-shot,No,IBM TSFM,Yes,97,0.7015,0.4866,0.7079,excluded: above the 10M cut,2026-07-23 sweep,18524928,raw safetensors header at revision r1.1
+Granite-FlowState-r1.1,Granite-FlowState-r1.1,zero-shot,No,IBM TSFM,Yes,97,0.7014,0.4901,0.7312,excluded: above the 10M cut,2026-07-23 sweep,,verified above the cut in the sweep; count not recorded per entry
+Granite-PatchTST-FM-r1,Granite-PatchTST-FM-r1,zero-shot,No,IBM TSFM & Rensselaer Polytechnic Institute,Yes,97,0.7171,0.4877,0.4213,excluded: above the 10M cut,2026-07-23 sweep,,verified above the cut in the sweep; count not recorded per entry
+Kairos_10m,Kairos_10m,zero-shot,No,ShanghaiTech University,Yes,97,0.7527,0.5541,0.7765,admitted to the census,at or below the 10M cut,9945477,released safetensors
+Kairos_23m,Kairos_23m,zero-shot,No,ShanghaiTech University,Yes,97,0.7480,0.5544,0.7804,excluded: above the 10M cut,2026-07-23 sweep,,verified above the cut in the sweep; count not recorded per entry
+Kairos_50m,Kairos_50m,zero-shot,No,ShanghaiTech University,Yes,97,0.7422,0.5482,0.7734,excluded: above the 10M cut,2026-07-23 sweep,,verified above the cut in the sweep; count not recorded per entry
+Lag-Llama,Lag-Llama,pretrained,Yes,Morgan Stanley & Service Now,No,97,1.2276,0.8804,1.0715,excluded: declares test-data leakage,its own board metadata,,
+Lingjiang,Lingjiang,zero-shot,No,Alibaba Cloud,No,97,1.0047,0.6208,0.7999,excluded: size cannot be established,empty or placeholder model link,,not establishable
+LongSeer-v1.0,LongSeer-v1.0,zero-shot,No,LongShine AI Research,No,97,0.7101,0.4907,0.4730,excluded: size cannot be established,empty or placeholder model link,,not establishable
+Migas-1.0,Migas-1.0,pretrained,No,Synthefy,No,97,0.6972,0.5975,1.8671,excluded: size cannot be established,empty or placeholder model link,,not establishable
+Moirai2,Moirai2,pretrained,No,Salesforce AI Research,Yes,97,0.7281,0.5164,0.5761,excluded: above the 10M cut,2026-07-23 sweep,11387208,released safetensors
+MoiraiAgent,MoiraiAgent,agentic,No,Salesforce AI Research,Yes,97,0.6887,0.4756,0.4262,out of scope: agentic or ensemble entry,its own board metadata,,
+MoiraiAgent-leaking,MoiraiAgent-leaking,agentic,Yes,Salesforce AI Research,Yes,97,0.6792,0.4717,0.4237,excluded: declares test-data leakage,its own board metadata,,
+Moirai_base,Moirai_base,zero-shot,No,Salesforce AI Research,Yes,97,0.9010,0.6095,0.6238,excluded: above the 10M cut,2026-07-23 sweep,,verified above the cut in the sweep; count not recorded per entry
+Moirai_large,Moirai_large,zero-shot,No,Salesforce AI Research,Yes,97,0.8749,0.5989,0.6273,excluded: above the 10M cut,2026-07-23 sweep,,verified above the cut in the sweep; count not recorded per entry
+N-BEATS,N-BEATS,deep-learning,No,ServiceNow,No,97,0.9377,0.8159,2.5115,out of scope: per-dataset supervised,its own board metadata,,
+PatchFM,PatchFM,zero-shot,No,LITIS,Yes,97,0.8132,0.5576,0.6405,excluded: above the 10M cut,2026-07-23 sweep,,verified above the cut in the sweep; count not recorded per entry
+PatchTST,PatchTST,deep-learning,No,Princeton University,No,97,0.8486,0.5870,0.5737,out of scope: per-dataset supervised,its own board metadata,,
+PatchTST-FM-r1,PatchTST-FM-r1,zero-shot,No,IBM TSFM & Rensselaer Polytechnic Institute,Yes,97,0.7069,0.4829,0.4179,excluded: above the 10M cut,2026-07-23 sweep,,verified above the cut in the sweep; count not recorded per entry
+Prism,Prism,agentic,No,Birla AI Labs,No,97,0.6804,0.4659,0.3941,out of scope: agentic or ensemble entry,its own board metadata,,
+RAES-Conductance-Ensemble,RAES-Conductance-Ensemble,agentic,Yes,California State University Northridge,Yes,97,0.6630,0.4555,0.4218,excluded: declares test-data leakage,its own board metadata,,
+RAES-Conductance-Ensemble-V,RAES-Conductance-Ensemble-V,agentic,No,SETI,Yes,97,0.6708,0.4638,0.4166,out of scope: agentic or ensemble entry,its own board metadata,,
+Reverso,Reverso,zero-shot,No,MIT,No,97,0.7112,0.6103,1.9047,admitted to the census,at or below the 10M cut,2600000,Reverso paper Table 1
+Reverso-Nano,Reverso-Nano,zero-shot,No,MIT,No,97,0.7598,0.6610,2.0348,admitted to the census,at or below the 10M cut,200000,Reverso paper Table 1
+Reverso-Small,Reverso-Small,zero-shot,No,MIT,Yes,97,0.7263,0.6265,1.9452,admitted to the census,at or below the 10M cut,550161,"checkpoint recount, excluding 10,240 non-learned FFT constants"
+STRIDE (+Chronos-2),STRIDE (+Chronos-2),pretrained,No,Google Cloud AI Research,No,97,0.6745,0.4544,0.3968,excluded: above the 10M cut,2026-07-23 sweep,,verified above the cut in the sweep; count not recorded per entry
+STRIDE (+Timer-S1),STRIDE (+Timer-S1),pretrained,No,Google Cloud AI Research,No,97,0.6744,0.4635,0.4461,excluded: above the 10M cut,2026-07-23 sweep,,verified above the cut in the sweep; count not recorded per entry
+Samay,Samay,agentic,No,Kairosity,No,0,,,,no per-configuration result,no all_results.csv at the pinned commit,,
+Super-Linear,Super-Linear,pretrained,Yes,Ben-Gurion University of the Negev,Yes,97,0.8568,0.7426,2.2946,excluded: declares test-data leakage,its own board metadata,,
+Synapse,Synapse,agentic,No,Google Cloud AI Research,No,97,0.6986,0.4794,0.4248,out of scope: agentic or ensemble entry,its own board metadata,,
+TSOrchestra,TSOrchestra,agentic,No,Melady Lab @ USC,No,97,0.6768,0.4680,0.4446,out of scope: agentic or ensemble entry,its own board metadata,,
+TSOrchestra-test,TSOrchestra-test,fine-tuned,Yes,Melady Lab @ USC,No,97,0.6981,0.4740,1.1307,excluded: declares test-data leakage,its own board metadata,,
+TTM-R1-Pretrained,TTM-R1-Pretrained,pretrained,Yes,IBM Research,Yes,97,1.0791,0.8913,2.8901,excluded: declares test-data leakage,its own board metadata,,
+TTM-R2-Finetuned,TTM-R2-Finetuned,fine-tuned,Yes,IBM Research,Yes,97,0.7561,0.5828,0.7361,excluded: declares test-data leakage,its own board metadata,,
+TTM-R2-Pretrained,TTM-R2-Pretrained,pretrained,Yes,IBM Research,Yes,97,1.0196,0.8734,2.7307,excluded: declares test-data leakage,its own board metadata,,
+TTM-R3-FT,TTM-R3-FT,fine-tuned,No,IBM TSFM,Yes,97,0.7133,0.5111,0.4882,out of scope: fitted to the evaluation series,its own board metadata,,
+TTM-R3-PT,TTM-R3-PT,pretrained,No,IBM TSFM,Yes,97,0.7240,0.5195,0.5013,admitted to the census,at or below the 10M cut,1414514,"released safetensors, main branch"
+Taichu-TimeSeries-Agent,Taichu-TimeSeries-Agent,agentic,No,zidongtaichu,No,97,0.6694,0.4635,0.4005,out of scope: agentic or ensemble entry,its own board metadata,,
+TempoPFN,TempoPFN,zero-shot,No,University of Freiburg,Yes,97,0.7875,0.5327,0.4910,excluded: above the 10M cut,2026-07-23 sweep,38000000,released checkpoint; its paper rounds to 40M
+TiRex,TiRex,zero-shot,No,NXAI,Yes,97,0.7158,0.4885,0.4263,excluded: above the 10M cut,2026-07-23 sweep,,verified above the cut in the sweep; count not recorded per entry
+TiRex-2-Pretrained,TiRex-2-Pretrained,pretrained,No,NXAI,Yes,97,0.6777,0.4669,0.4033,excluded: above the 10M cut,2026-07-23 sweep,,verified above the cut in the sweep; count not recorded per entry
+TiRex-2-Zeroshot,TiRex-2-Zeroshot,zero-shot,No,NXAI,Yes,97,0.6973,0.4781,0.4138,excluded: above the 10M cut,2026-07-23 sweep,38400000,"its paper, active univariate parameters"
+TimeCopilot,TimeCopilot,agentic,No,,Yes,97,0.7051,0.4831,0.4153,out of scope: agentic or ensemble entry,its own board metadata,,
+TimeRouter,TimeRouter,agentic,No,UConn & Morgan Stanley,Yes,97,0.6746,0.4696,0.4311,out of scope: agentic or ensemble entry,its own board metadata,,
+Timer-s1,Timer-S1,pretrained,No,Tsinghua & ByteDance,Yes,97,0.6934,0.4853,0.4953,excluded: above the 10M cut,2026-07-23 sweep,8300000000,2026-07-23 sweep
+TimesFM-2.5,TimesFM-2.5,zero-shot,No,Google Research,Yes,97,0.7050,0.4903,0.4225,excluded: above the 10M cut,2026-07-23 sweep,,verified above the cut in the sweep; count not recorded per entry
+Toto-2.0-1B,Toto-2.0-1B,pretrained,No,Datadog,Yes,97,0.6992,0.4784,0.4277,excluded: above the 10M cut,2026-07-23 sweep,,verified above the cut in the sweep; count not recorded per entry
+Toto-2.0-2.5B,Toto-2.0-2.5B,pretrained,No,Datadog,Yes,97,0.6956,0.4759,0.4173,excluded: above the 10M cut,2026-07-23 sweep,,verified above the cut in the sweep; count not recorded per entry
+Toto-2.0-2.5B-FT,Toto-2.0-2.5B-FT,fine-tuned,No,Datadog,Yes,97,0.6791,0.4634,0.3998,out of scope: fitted to the evaluation series,its own board metadata,,
+Toto-2.0-22m,Toto-2.0-22m,pretrained,No,Datadog,Yes,97,0.7188,0.4963,0.4323,excluded: above the 10M cut,2026-07-23 sweep,,verified above the cut in the sweep; count not recorded per entry
+Toto-2.0-313m,Toto-2.0-313m,pretrained,No,Datadog,Yes,97,0.7028,0.4814,0.4286,excluded: above the 10M cut,2026-07-23 sweep,,verified above the cut in the sweep; count not recorded per entry
+Toto-2.0-4m,Toto-2.0-4m,pretrained,No,Datadog,Yes,97,0.7565,0.5242,0.4552,admitted to the census,at or below the 10M cut,4144448,released safetensors
+Toto-2.0-FnF,Toto-2.0-FnF,agentic,No,Datadog,Yes,97,0.6762,0.4634,0.3990,out of scope: agentic or ensemble entry,its own board metadata,,
+Toto_Open_Base_1.0,Toto_Open_Base_1.0,zero-shot,No,Datadog,Yes,97,0.7501,0.5173,0.4761,excluded: above the 10M cut,2026-07-23 sweep,,verified above the cut in the sweep; count not recorded per entry
+TurkForecast-FM-Chronos2-LoRA-v1,TurkForecast-FM-Chronos2-LoRA-v1,fine-tuned,No,TurkForecast (Mert Karatay),Yes,97,0.6582,0.4230,0.4481,out of scope: fitted to the evaluation series,its own board metadata,,
+VISIT-1.0,VISIT-1.0,pretrained,No,,No,97,1.2698,1.5912,1.8962,excluded: size cannot be established,empty or placeholder model link,,not establishable
+VISIT-2.0,VISIT-2.0,pretrained,No,,No,97,0.7138,0.4996,0.4316,excluded: size cannot be established,empty or placeholder model link,,not establishable
+ValBestSingle-cmtt,ValBestSingle-cmtt,agentic,No,G-connor,No,97,0.7070,0.6043,1.8935,out of scope: agentic or ensemble entry,its own board metadata,,
+Xihe-max,Xihe-max,zero-shot,No,Ant,No,97,0.7109,0.4905,0.5215,excluded: size cannot be established,publishes a 9.5M-1.5B family without a per-configuration result naming the member,,not establishable
+Xihe-ultra,Xihe-ultra,zero-shot,No,Ant,No,97,0.7011,0.4880,0.5127,excluded: size cannot be established,publishes a 9.5M-1.5B family without a per-configuration result naming the member,,not establishable
+YingLong_110m,YingLong_110m,zero-shot,No,Alibaba,Yes,97,0.8093,0.5574,0.4776,excluded: above the 10M cut,2026-07-23 sweep,,verified above the cut in the sweep; count not recorded per entry
+YingLong_300m,YingLong_300m,zero-shot,No,Alibaba,Yes,97,0.7981,0.5483,0.4731,excluded: above the 10M cut,2026-07-23 sweep,,verified above the cut in the sweep; count not recorded per entry
+YingLong_50m,YingLong_50m,zero-shot,No,Alibaba,Yes,97,0.8224,0.5667,0.4905,excluded: above the 10M cut,2026-07-23 sweep,,verified above the cut in the sweep; count not recorded per entry
+YingLong_6m,YingLong_6m,zero-shot,No,Alibaba,Yes,97,0.8802,0.6090,0.5342,admitted to the census,at or below the 10M cut,7319566,safetensors header recount
+ZooCast-Top1,ZooCast-Top1,agentic,No,,No,97,0.6922,0.4822,0.4040,out of scope: agentic or ensemble entry,its own board metadata,,
+auto_arima,Auto_Arima,statistical,No,,No,97,1.0736,0.9117,0.9476,out of scope: fitted per series at inference,its own board metadata,,
+auto_ets,Auto_ETS,statistical,No,,No,97,1.2117,7.4890,8.6352,out of scope: fitted per series at inference,its own board metadata,,
+auto_theta,Auto_Theta,statistical,No,,No,97,1.0900,1.2437,1.1993,out of scope: fitted per series at inference,its own board metadata,,
+chronos-2,Chronos-2,pretrained,No,AWS,Yes,97,0.6978,0.4854,0.4038,excluded: above the 10M cut,2026-07-23 sweep,,verified above the cut in the sweep; count not recorded per entry
+chronos-2-synth,Chronos-2-Synth,zero-shot,No,AWS,Yes,97,0.7203,0.4958,0.4351,excluded: above the 10M cut,2026-07-23 sweep,,verified above the cut in the sweep; count not recorded per entry
+chronos_base,Chronos_base,pretrained,Yes,AWS AI Labs,Yes,97,0.8758,0.6521,1.0471,excluded: declares test-data leakage,its own board metadata,,
+chronos_bolt_base,chronos_bolt_base,pretrained,Yes,AWS AI Labs,Yes,97,0.8076,0.5743,0.6806,excluded: declares test-data leakage,its own board metadata,,
+chronos_bolt_small,chronos_bolt_small,pretrained,Yes,AWS AI Labs,Yes,97,0.8221,0.5767,0.7114,excluded: declares test-data leakage,its own board metadata,,
+chronos_large,Chronos_large,pretrained,Yes,AWS AI Labs,Yes,97,0.8696,0.6473,1.0347,excluded: declares test-data leakage,its own board metadata,,
+crossformer,Crossformer,deep-learning,No,Shanghai Jiao Tong University,No,97,2.5739,1.6366,6.8924,out of scope: per-dataset supervised,its own board metadata,,
+deepar,DeepAR,deep-learning,No,Amazon Research,No,97,1.3435,0.8531,0.9334,out of scope: per-dataset supervised,its own board metadata,,
+iTransformer,i_transformer,deep-learning,No,Tsinghua University,Yes,97,0.8932,0.6203,0.6127,out of scope: per-dataset supervised,its own board metadata,,
+metis-autocast,metis-autocast,agentic,No,Metis,No,97,0.6796,0.4621,0.4260,out of scope: agentic or ensemble entry,its own board metadata,,
+moirai_small,Moirai_small,zero-shot,No,Salesforce AI Research,Yes,97,0.9461,0.6504,0.6652,excluded: above the 10M cut,2026-07-23 sweep,,verified above the cut in the sweep; count not recorded per entry
+naive,Naive,statistical,No,,Yes,97,1.2698,1.5912,1.8962,reference,the benchmark's own reference row,,
+seasonal_naive,Seasonal_Naive,statistical,No,,Yes,97,1.0000,1.0000,1.0000,reference,the benchmark's own reference row,,
+sundial_base_128m,sundial_base_128m,zero-shot,No,Tsinghua University,Yes,97,0.7502,0.5590,0.7593,excluded: above the 10M cut,2026-07-23 sweep,,verified above the cut in the sweep; count not recorded per entry
+t0-alpha,t0-alpha,pretrained,No,The Forecasting Company,Yes,97,0.7240,0.4941,0.4284,excluded: above the 10M cut,2026-07-23 sweep,101600000,2026-07-23 sweep
+tabpfn_ts,TabPFN-TS,zero-shot,No,PriorLabs,Yes,97,0.7709,0.5441,0.5253,excluded: above the 10M cut,2026-07-23 sweep,11100000,its own paper
+tempo_ensemble,TEMPO_ENSEMBLE,fine-tuned,Yes,Melady Lab @ USC,No,97,0.7878,0.4616,0.5045,excluded: declares test-data leakage,its own board metadata,,
+tft,TFT,deep-learning,No,Google Research,No,97,0.9153,0.6047,0.6563,out of scope: per-dataset supervised,its own board metadata,,
+tide,TIDE,deep-learning,No,Google Research,No,97,1.0914,0.7715,0.9056,out of scope: per-dataset supervised,its own board metadata,,
+timesfm,TimesFM,pretrained,Yes,Google Research,Yes,97,1.0771,0.6804,0.9789,excluded: declares test-data leakage,its own board metadata,,
+timesfm_2_0_500m,timesfm_2_0_500m,pretrained,Yes,Google Research,Yes,97,0.7581,0.5504,0.6173,excluded: declares test-data leakage,its own board metadata,,
+visionts,VisionTS,zero-shot,No,Zhejiang University,No,97,0.8633,0.7550,2.3119,excluded: above the 10M cut,2026-07-23 sweep,112000000,ViT-Base MAE backbone
+xLSTM-Mixer,xLSTM-Mixer,deep-learning,No,AIML Lab @ TU Darmstadt,No,97,0.7804,0.5099,0.5922,out of scope: per-dataset supervised,its own board metadata,,

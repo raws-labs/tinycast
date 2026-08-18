@@ -1,0 +1,16 @@
+{
+ "_what": "Head-to-head against Reverso-Nano on GIFT-Eval MASE[0.5], split by whether the benchmark declares a seasonal period.",
+ "metric": "eval_metrics/MASE[0.5]; a win is our value strictly below Reverso-Nano's",
+ "ours": "deployed/host.csv (the host profile)",
+ "comparator": "chronos-zs and census sources: the pinned GIFT-Eval snapshot's Reverso-Nano per-configuration file",
+ "grouping": "configurations whose naive and seasonal-naive rows are byte-identical on every eval metric, which is how the benchmark marks no declared seasonality; see configurations.csv",
+ "n_configurations": 97,
+ "aseasonal": {
+  "wins": 11,
+  "n": 24
+ },
+ "seasonal": {
+  "wins": 19,
+  "n": 73
+ }
+}

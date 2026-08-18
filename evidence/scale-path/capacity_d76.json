@@ -1,0 +1,39 @@
+{
+  "purpose": "Capacity sensitivity at fixed recipe: model width d 64 -> 76 (+19%), control.csv vs width-d76.csv, 30k-step family, 97 configurations.",
+  "note": "batch_size/accumulate_grad_batches differ to hold effective batch constant under the larger width.",
+  "metrics": {
+    "nGMASE": {
+      "control": 0.8123,
+      "d76": 0.8105,
+      "delta": -0.0018,
+      "ci95": [
+        -0.0081,
+        0.0047
+      ],
+      "n": 97,
+      "spans_zero": true
+    },
+    "nCRPS": {
+      "control": 0.5699,
+      "d76": 0.568,
+      "delta": -0.0019,
+      "ci95": [
+        -0.0063,
+        0.0021
+      ],
+      "n": 97,
+      "spans_zero": true
+    },
+    "nMSIS": {
+      "control": 0.5783,
+      "d76": 0.5835,
+      "delta": 0.0052,
+      "ci95": [
+        -0.0039,
+        0.0142
+      ],
+      "n": 97,
+      "spans_zero": true
+    }
+  }
+}

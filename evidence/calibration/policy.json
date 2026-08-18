@@ -1,0 +1,120 @@
+{
+ "_what": "The selection and calibration policy behind every exact static-W8A8 number in the paper.",
+ "_reduced_from": {
+  "file": "the deploy tree's runtime calibration manifest",
+  "sha256": "4b1d08ef9b606294585a12db3061d0d4e19cb4d719988ed818383619cd91cf64",
+  "_why": "The full manifest records absolute paths from the machine the run happened on and internal module names. Those are provenance for that machine, not for a reader, and they cannot be renamed without rewriting a provenance record. This file carries the fields the paper's claims rest on and nothing else; the digest above identifies the manifest it was reduced from."
+ },
+ "selection": {
+  "preimage_bytes": "utf8(protocol + NUL + source + NUL + decimal_source_local_id)",
+  "protocol": "runtime-v1",
+  "ranking": "lexicographically smallest SHA-256 digest, local_id tie-break",
+  "selected_series": 32,
+  "selections_jsonl": {
+   "path": "selections.jsonl",
+   "sha256": "de7345f55902aa1fd554d74de34906069486afc0a7446a69ef2be4c815a37842"
+  },
+  "series_per_source": 16,
+  "sources": [
+   "dominick",
+   "wiki_daily_100k"
+  ],
+  "value_independent": true
+ },
+ "calibration_policy": {
+  "decoder_seed_coupling": "use max(absmax(full encoder h), absmax(decoder seed tail))",
+  "percentile_clipping": false,
+  "phase_profile_headroom": "profile scale = (FP profile absmax + calibrated seed scale) / 127; one seed-scale unit bounds h quantization plus rounded bin-mean error",
+  "post_selection_tuning": false,
+  "range_estimator": "finite absolute maximum over every pre-registered call"
+ },
+ "aggregate_activation_ranges": {
+  "ctx_in": {
+   "absmax": 1.0,
+   "calls": 1216,
+   "elements": 34865152,
+   "finite_elements": 34865152,
+   "max": 1.0,
+   "min": -1.0
+  },
+  "encoder_h_full": {
+   "absmax": 4.516731262207031,
+   "calls": 1216,
+   "elements": 159383552,
+   "finite_elements": 159383552,
+   "max": 4.508392810821533,
+   "min": -4.516731262207031
+  },
+  "fc_in": {
+   "absmax": 1.0,
+   "calls": 1216,
+   "elements": 817152,
+   "finite_elements": 817152,
+   "max": 1.0,
+   "min": -1.0
+  },
+  "phase_profile": {
+   "absmax": 2.1982247829437256,
+   "calls": 1216,
+   "elements": 4980736,
+   "finite_elements": 4980736,
+   "max": 2.1680455207824707,
+   "min": -2.1982247829437256
+  },
+  "q_in": {
+   "absmax": 4.416766166687012,
+   "calls": 1216,
+   "elements": 11965440,
+   "finite_elements": 11965440,
+   "max": 4.3949055671691895,
+   "min": -4.416766166687012
+  },
+  "seed": {
+   "absmax": 4.516731262207031,
+   "calls": 1216,
+   "elements": 9961472,
+   "finite_elements": 9961472,
+   "max": 4.508392810821533,
+   "min": -4.516731262207031
+  },
+  "y_norm_post_clamp": {
+   "absmax": 1.3881767988204956,
+   "calls": 1216,
+   "elements": 525312,
+   "finite_elements": 525312,
+   "max": 1.3881767988204956,
+   "min": -0.35357537865638733
+  },
+  "y_norm_pre_clamp": {
+   "absmax": 1.3881767988204956,
+   "calls": 1216,
+   "elements": 525312,
+   "finite_elements": 525312,
+   "max": 1.3881767988204956,
+   "min": -0.35357537865638733
+  },
+  "y_raw": {
+   "absmax": 512.8107299804688,
+   "calls": 1216,
+   "elements": 525312,
+   "finite_elements": 525312,
+   "max": 512.8107299804688,
+   "min": -500.466552734375
+  }
+ },
+ "cache": {
+  "dataset_names": [
+   "dominick",
+   "wiki_daily_100k"
+  ],
+  "series_count": 200014
+ },
+ "checkpoint": {
+  "sha256": "b9854b9088f7f6cc67f6139eaf975667b597f1fbd9b9387ea88487f04ea42856",
+  "size_bytes": 2596607
+ },
+ "calls_jsonl": {
+  "path": "calls.jsonl",
+  "sha256": "e2eb3a72465513389f37a242109cfef86d9a25ced619501d1eca8ed7ef742325"
+ }
+}

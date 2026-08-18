@@ -1,0 +1,256 @@
+{
+ "_note": "Parameter counts by instantiation from the released implementation. Tied tensors are counted once, which a checkpoint sum does not do.",
+ "method": "sum(p.numel() for p in model.parameters() if p.requires_grad)",
+ "deployed": {
+  "total_params": 146505,
+  "int8_quantized_weight_scalars": 141440,
+  "bias_and_norm_scalars_at_higher_precision": 5065,
+  "budget_rows": [
+   {
+    "stage": "input",
+    "module": "Linear_in (14->64)",
+    "params": 960,
+    "tensors": 2
+   },
+   {
+    "stage": "encoder",
+    "module": "depthwise conv (10x(64,1,3)+bias)",
+    "params": 2560,
+    "tensors": 20
+   },
+   {
+    "stage": "encoder",
+    "module": "pointwise 1x1 (10x(64,64,1)+bias)",
+    "params": 41600,
+    "tensors": 20
+   },
+   {
+    "stage": "encoder",
+    "module": "shared SwiGLU (up 64->128, down 64->64)",
+    "params": 12480,
+    "tensors": 4
+   },
+   {
+    "stage": "encoder",
+    "module": "RMSNorms (20x(64))",
+    "params": 1280,
+    "tensors": 20
+   },
+   {
+    "stage": "phase",
+    "module": "W_phase (256->64)",
+    "params": 16448,
+    "tensors": 2
+   },
+   {
+    "stage": "query",
+    "module": "W_q (205->64)",
+    "params": 13184,
+    "tensors": 2
+   },
+   {
+    "stage": "decoder",
+    "module": "SwiGLU + RMSNorm",
+    "params": 12544,
+    "tensors": 5
+   },
+   {
+    "stage": "future-conv",
+    "module": "W_fc-in (14->64)",
+    "params": 960,
+    "tensors": 2
+   },
+   {
+    "stage": "future-conv",
+    "module": "depthwise conv (6x(64,1,3)+bias)",
+    "params": 1536,
+    "tensors": 12
+   },
+   {
+    "stage": "future-conv",
+    "module": "pointwise 1x1 (6x(64,64,1)+bias)",
+    "params": 24960,
+    "tensors": 12
+   },
+   {
+    "stage": "future-conv",
+    "module": "shared SwiGLU",
+    "params": 12480,
+    "tensors": 4
+   },
+   {
+    "stage": "future-conv",
+    "module": "RMSNorms (12x(64))",
+    "params": 768,
+    "tensors": 12
+   },
+   {
+    "stage": "future-conv",
+    "module": "W_fc-out (64->64)",
+    "params": 4160,
+    "tensors": 2
+   },
+   {
+    "stage": "output",
+    "module": "W_out (64->9)",
+    "params": 585,
+    "tensors": 2
+   }
+  ],
+  "subtotals": {
+   "encoder subtotal": 57920,
+   "future-conv subtotal": 44864
+  }
+ },
+ "feed_forward_tying_and_separable_convolutions": {
+  "params_without_both": 338185,
+  "params_with_both": 146505,
+  "params_removed": 191680
+ },
+ "arms": [
+  {
+   "arm": "architecture family control",
+   "params": 340545,
+   "config": {
+    "seq_len": 2048,
+    "p_out": 48,
+    "d": 64,
+    "n_layers": 10,
+    "kernel": 3,
+    "pool_kind": "mean_last",
+    "top_k_periods": 4,
+    "ffn_mult": 1.5,
+    "n_quantiles": 1
+   }
+  },
+  {
+   "arm": "architecture family, phase binning",
+   "params": 361089,
+   "config": {
+    "seq_len": 2048,
+    "p_out": 48,
+    "d": 64,
+    "n_layers": 10,
+    "kernel": 3,
+    "pool_kind": "mean_last",
+    "top_k_periods": 4,
+    "ffn_mult": 1.5,
+    "n_quantiles": 1,
+    "phase_bins": 16
+   }
+  },
+  {
+   "arm": "architecture family, phase binning and recency gate",
+   "params": 393921,
+   "config": {
+    "seq_len": 2048,
+    "p_out": 48,
+    "d": 64,
+    "n_layers": 10,
+    "kernel": 3,
+    "pool_kind": "mean_last",
+    "top_k_periods": 4,
+    "ffn_mult": 1.5,
+    "n_quantiles": 1,
+    "phase_bins": 16,
+    "recency_bins": 8,
+    "sig_gate": true
+   }
+  },
+  {
+   "arm": "architecture family, substituted-recency arm",
+   "params": 410241,
+   "config": {
+    "seq_len": 2048,
+    "p_out": 48,
+    "d": 64,
+    "n_layers": 10,
+    "kernel": 3,
+    "pool_kind": "mean_last",
+    "top_k_periods": 4,
+    "ffn_mult": 1.5,
+    "n_quantiles": 1,
+    "phase_bins": 0,
+    "recency_bins": 16,
+    "periodogram_off": true
+   }
+  },
+  {
+   "arm": "component family control",
+   "params": 394441,
+   "config": {
+    "seq_len": 2048,
+    "p_out": 48,
+    "d": 64,
+    "n_layers": 10,
+    "kernel": 3,
+    "pool_kind": "mean_last",
+    "top_k_periods": 4,
+    "ffn_mult": 1.5,
+    "n_quantiles": 9,
+    "phase_bins": 16,
+    "recency_bins": 8,
+    "sig_gate": true
+   }
+  },
+  {
+   "arm": "component family, future-conv arm",
+   "params": 445513,
+   "config": {
+    "seq_len": 2048,
+    "p_out": 48,
+    "d": 64,
+    "n_layers": 10,
+    "kernel": 3,
+    "pool_kind": "mean_last",
+    "top_k_periods": 4,
+    "ffn_mult": 1.5,
+    "n_quantiles": 9,
+    "phase_bins": 16,
+    "recency_bins": 8,
+    "sig_gate": true,
+    "future_conv": true
+   }
+  },
+  {
+   "arm": "deployed model",
+   "params": 146505,
+   "config": {
+    "seq_len": 2048,
+    "p_out": 48,
+    "d": 64,
+    "n_layers": 10,
+    "kernel": 3,
+    "pool_kind": "mean_last",
+    "top_k_periods": 4,
+    "ffn_mult": 1.0,
+    "n_quantiles": 9,
+    "phase_bins": 16,
+    "causal": true,
+    "separable_conv": true,
+    "share_ffn": true,
+    "future_conv": true
+   }
+  },
+  {
+   "arm": "deployed architecture, feed-forward untied and convolutions not separable",
+   "params": 338185,
+   "config": {
+    "seq_len": 2048,
+    "p_out": 48,
+    "d": 64,
+    "n_layers": 10,
+    "kernel": 3,
+    "pool_kind": "mean_last",
+    "top_k_periods": 4,
+    "ffn_mult": 1.0,
+    "n_quantiles": 9,
+    "phase_bins": 16,
+    "causal": true,
+    "separable_conv": false,
+    "share_ffn": false,
+    "future_conv": true
+   }
+  }
+ ]
+}

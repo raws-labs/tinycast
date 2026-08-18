@@ -1,0 +1,55 @@
+TinyCast
+Copyright 2026 RAWS Labs
+
+This product is licensed under the Apache License, Version 2.0.
+
+------------------------------------------------------------------------
+Third-party attributions
+------------------------------------------------------------------------
+
+1. GIFT-Eval benchmark reference artefacts
+   Files: tinycast/reference/dataset_properties.json,
+          tinycast/reference/seasonal_naive.csv
+   These are the per-dataset properties and the seasonal-naive baseline
+   (used as the denominator of normalized MASE / nGMASE) from Salesforce AI
+   Research's GIFT-Eval benchmark.
+   Source: https://github.com/SalesforceAIResearch/gift-eval
+   Copyright Salesforce, Inc. Licensed under the Apache License, Version 2.0.
+
+2. GluonTS
+   The evaluation and forecast-container APIs (gluonts.model.evaluate_model,
+   gluonts.ev metrics, gluonts.model.forecast.QuantileForecast) are used as a
+   runtime dependency.
+   Source: https://github.com/awslabs/gluonts
+   Licensed under the Apache License, Version 2.0.
+
+3. Autoregressive-rollout predictor
+   File: tinycast/predictor.py
+   The autoregressive-rollout decoding, flip-invariance symmetrization and
+   NaN-imputation logic are adapted from the Reverso project's GIFT-Eval
+   predictor (example/eval_gift.py).
+   Source: https://github.com/shinfxh/reverso
+   Licensed under the MIT License:
+
+     Copyright (c) 2026 Reverso Authors
+
+     Permission is hereby granted, free of charge, to any person obtaining a
+     copy of this software and associated documentation files (the "Software"),
+     to deal in the Software without restriction, including without limitation
+     the rights to use, copy, modify, merge, publish, distribute, sublicense,
+     and/or sell copies of the Software, and to permit persons to whom the
+     Software is furnished to do so, subject to the following conditions:
+
+     The above copyright notice and this permission notice shall be included in
+     all copies or substantial portions of the Software.
+
+     THE SOFTWARE IS PROVIDED "AS IS", WITHOUT WARRANTY OF ANY KIND, EXPRESS OR
+     IMPLIED, INCLUDING BUT NOT LIMITED TO THE WARRANTIES OF MERCHANTABILITY,
+     FITNESS FOR A PARTICULAR PURPOSE AND NONINFRINGEMENT. IN NO EVENT SHALL THE
+     AUTHORS OR COPYRIGHT HOLDERS BE LIABLE FOR ANY CLAIM, DAMAGES OR OTHER
+     LIABILITY, WHETHER IN AN ACTION OF CONTRACT, TORT OR OTHERWISE, ARISING
+     FROM, OUT OF OR IN CONNECTION WITH THE SOFTWARE OR THE USE OR OTHER
+     DEALINGS IN THE SOFTWARE.
+
+The GIFT-Eval evaluation protocol (dataset/term layout, metric definitions,
+period-alignment convention) follows the public GIFT-Eval benchmark.

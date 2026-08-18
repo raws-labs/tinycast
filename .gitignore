@@ -1,0 +1,33 @@
+# Patterns that name a directory or a bare filename are anchored with a leading
+# slash unless they are genuinely meant to match at any depth. Unanchored, a
+# name like "build/" or "all_results.csv" also matches a nested copy, which is
+# how a committed artifact goes missing without anyone noticing.
+
+# Match at any depth, deliberately.
+__pycache__/
+*.py[cod]
+*.egg-info/
+.ipynb_checkpoints/
+.DS_Store
+
+# Root-level only.
+/build/
+/dist/
+/.venv/
+
+# Training checkpoints. Torch-serialized files are never a release artifact:
+# the released weights are model.safetensors (see tinycast/export.py).
+*.ckpt
+
+# The eval driver's default output and its derived summary sidecar, at the repo
+# root only. gift_eval_submission/all_results.csv is a deliberate deliverable
+# and must stay committable; the pinned per-configuration results that back the
+# published aggregates are tinycast/reference/gift_eval_tinycast.csv.
+/all_results.csv
+/all_results.bins.json
+# notebooks/tinycast.ipynb writes the same two files into its own directory.
+/notebooks/all_results.csv
+/notebooks/all_results.bins.json
+
+# Generated synthetic corpus shards (tens of gigabytes each).
+/synth4096_*/

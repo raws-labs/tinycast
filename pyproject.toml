@@ -1,0 +1,86 @@
+[build-system]
+requires = ["setuptools>=61.0"]
+build-backend = "setuptools.build_meta"
+
+[project]
+name = "tinycast"
+version = "1.0.0"
+description = "TinyCast: an attention-free, 146,505-parameter dilated-convolution time-series foundation model"
+readme = "README.md"
+requires-python = ">=3.10"
+license = { text = "Apache-2.0" }
+authors = [{ name = "RAWS Labs" }]
+keywords = [
+    "time-series", "forecasting", "foundation-model",
+    "attention-free", "gift-eval", "edge",
+]
+classifiers = [
+    "License :: OSI Approved :: Apache Software License",
+    "Programming Language :: Python :: 3",
+    "Intended Audience :: Science/Research",
+    "Topic :: Scientific/Engineering :: Artificial Intelligence",
+]
+
+# Runtime dependencies. One set covers every code path in the package:
+# inference, evaluation, training, checkpoint export and synthetic-corpus
+# generation. Training, export and corpus generation import only torch, numpy
+# and safetensors, each of which the predictor already needs, so none of them
+# adds a distribution. Corpus generation also needs a CUDA-capable torch at
+# runtime, which is the same distribution and not a separate requirement.
+# Distributed orchestration is not part of this package.
+#
+# huggingface_hub is the exception in the other direction: no module imports it,
+# but the notebooks resolve the released weights through it, so it belongs in
+# the base install rather than behind an extra nobody would know to ask for.
+#
+# The GIFT-Eval data loader that tinycast.eval imports is not here, because it
+# has no PyPI release. Install it alongside:
+#   pip install "salesforce-gift-eval @ git+https://github.com/SalesforceAIResearch/gift-eval.git"
+# The distribution is named salesforce-gift-eval; the import name is gift_eval.
+dependencies = [
+    "torch>=2.0",
+    "numpy>=1.24",
+    "pandas>=2.0",
+    "gluonts>=0.14",
+    "safetensors>=0.4",
+    "huggingface_hub>=0.23",
+]
+
+[project.optional-dependencies]
+# There is deliberately no "eval" extra. The only way to name the GIFT-Eval data
+# loader here is a git direct reference, and PyPI rejects any distribution whose
+# metadata carries one, so such an extra would work from a source tree and make
+# the package unpublishable. It is a documented pip command instead (above).
+
+# tinycast.train, tinycast.losses, tinycast.export, tinycast.synth and
+# tinycast.corpus. Every package listed here is already a base dependency, so
+# "pip install tinycast[train]" installs nothing extra; the extra names the
+# path so documentation and CI can ask for it, and it is where a
+# training-only dependency belongs if one is ever added. Building the
+# synthetic corpus additionally needs a CUDA device, which no dependency
+# expresses: tinycast.corpus checks for it and refuses rather than falling
+# back to a CPU path that produces different data.
+train = [
+    "torch>=2.0",
+    "numpy>=1.24",
+    "safetensors>=0.4",
+]
+
+# The test runner. There is no separate test suite: the two notebooks under
+# notebooks/ are the tests, executed top to bottom by nbmake, and every cell
+# ends in the assertions that check it. ipykernel is what nbmake runs them in.
+dev = [
+    "pytest>=8.0",
+    "nbmake>=1.5",
+    "ipykernel>=6.0",
+]
+
+[project.urls]
+Homepage = "https://huggingface.co/raws-labs/tinycast"
+Repository = "https://github.com/raws-labs/tinycast"
+
+[tool.setuptools.packages.find]
+include = ["tinycast*"]
+
+[tool.setuptools.package-data]
+tinycast = ["reference/*.json", "reference/*.csv"]

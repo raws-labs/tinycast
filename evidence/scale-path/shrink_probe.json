@@ -1,0 +1,52 @@
+{
+  "purpose": "Model-slimming probe: shrink_control_s7000.csv (445,513 params) vs shrink_stacked_s7000.csv (225,865), matched corpus/recipe/budget, evaluated at step 7000. Recovered from unmerged per-process shards of the run's evaluation output, which were never merged locally.",
+  "configs": {
+    "control": "shrink_control_s7000.csv",
+    "stacked": "shrink_stacked_s7000.csv"
+  },
+  "cuts_control_to_stacked": [
+    "ffn_mult 1.5 -> 1.0",
+    "recency_bins 8 -> 0",
+    "share_ffn false -> true",
+    "sig_gate true -> false"
+  ],
+  "n_configs": {
+    "control": 43,
+    "stacked": 44,
+    "paired": 43,
+    "benchmark_total": 97
+  },
+  "note_partial": "Runs were not completed: one configuration per shard, so coverage is a subset of the 97. The comparison is paired on the intersection.",
+  "paired": {
+    "nMASE": {
+      "ratio_stacked_over_control": 1.0085,
+      "pct_change": 0.85,
+      "ci95": [
+        0.9697,
+        1.045
+      ],
+      "n": 43,
+      "n_worse": 22
+    },
+    "nCRPS": {
+      "ratio_stacked_over_control": 1.0085,
+      "pct_change": 0.85,
+      "ci95": [
+        0.9892,
+        1.0321
+      ],
+      "n": 43,
+      "n_worse": 22
+    },
+    "nMSIS": {
+      "ratio_stacked_over_control": 0.9531,
+      "pct_change": -4.69,
+      "ci95": [
+        0.9145,
+        0.9926
+      ],
+      "n": 43,
+      "n_worse": 21
+    }
+  }
+}

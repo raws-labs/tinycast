@@ -1,0 +1,362 @@
+{
+  "_what": "Paired bootstrap contrasts between all three arms of the shipped-recipe detector ablation, on all 97 GIFT-Eval configurations. Positive = the first arm named in the key is worse.",
+  "_convention": "8-checkpoint soup, all four arms. Each arm is the uniform average of its own 8 periodic saves at steps 29000-36000, which EXCLUDES last.ckpt at step 36621. The published seed-42 soup was built from exactly those eight and reconstructs from them element-for-element; the only difference from the other three is that it summed them in descending step order, which moves 4 of 321225 weights by one bf16 ulp. The arm scored here re-souped them in ascending order, matching the other three, and was rescored on one RTX 3090 under the same harness so that no arm's level depends on when it was scored.",
+  "_companions": "three_arm_soup_bootstrap.json and three_arm_last_bootstrap.json are the same three arms under the two checkpoint conventions; arm1_vs_shipped_last_bootstrap.json holds detector-off against the shipped model at seed 42, from last.ckpt. No contrast is duplicated across the three files. The manuscript quotes the 8-checkpoint soup file.",
+  "_reducer": "compare_ablation_arms.py, from the research repository",
+  "_normalizer": "../deployed/seasonal-naive.csv",
+  "arms": [
+    {
+      "name": "detector-off-seed42-soup",
+      "csv": "detector-off-seed42-soup.csv"
+    },
+    {
+      "name": "shipped-seed42-soup",
+      "csv": "shipped-seed42-soup.csv"
+    },
+    {
+      "name": "shipped-seed43-soup",
+      "csv": "shipped-seed43-soup.csv"
+    },
+    {
+      "name": "shipped-seed44-soup",
+      "csv": "shipped-seed44-soup.csv"
+    }
+  ],
+  "n_paired_configs": 97,
+  "bootstrap": {
+    "B": 10000,
+    "seed": 0,
+    "unit": "configuration",
+    "interval": "percentile, 95%"
+  },
+  "levels": {
+    "detector-off-seed42-soup": {
+      "nGMASE": 0.7814012228154236,
+      "nCRPS": 0.5483102861397534,
+      "bands": {
+        "sub_hourly": {
+          "n": 36,
+          "nGMASE": 0.7953587106984562
+        },
+        "hourly": {
+          "n": 31,
+          "nGMASE": 0.7590988907507521
+        },
+        "daily_or_coarser": {
+          "n": 30,
+          "nGMASE": 0.7882105815822179
+        }
+      }
+    },
+    "shipped-seed42-soup": {
+      "nGMASE": 0.7738351062363672,
+      "nCRPS": 0.5454623116992472,
+      "bands": {
+        "sub_hourly": {
+          "n": 36,
+          "nGMASE": 0.7795091178010433
+        },
+        "hourly": {
+          "n": 31,
+          "nGMASE": 0.7543284153973855
+        },
+        "daily_or_coarser": {
+          "n": 30,
+          "nGMASE": 0.7875872231233548
+        }
+      }
+    },
+    "shipped-seed43-soup": {
+      "nGMASE": 0.774453535809498,
+      "nCRPS": 0.5436123474520504,
+      "bands": {
+        "sub_hourly": {
+          "n": 36,
+          "nGMASE": 0.7834482464569837
+        },
+        "hourly": {
+          "n": 31,
+          "nGMASE": 0.7568363235348994
+        },
+        "daily_or_coarser": {
+          "n": 30,
+          "nGMASE": 0.782175024787706
+        }
+      }
+    },
+    "shipped-seed44-soup": {
+      "nGMASE": 0.7746999296652752,
+      "nCRPS": 0.543249749538149,
+      "bands": {
+        "sub_hourly": {
+          "n": 36,
+          "nGMASE": 0.780133248863867
+        },
+        "hourly": {
+          "n": 31,
+          "nGMASE": 0.7592273249554066
+        },
+        "daily_or_coarser": {
+          "n": 30,
+          "nGMASE": 0.7844132730120219
+        }
+      }
+    }
+  },
+  "contrasts": {
+    "detector-off-seed42-soup vs shipped-seed42-soup": {
+      "nGMASE": {
+        "n": 97,
+        "delta": 0.00756611657905637,
+        "lo": 0.0001559647387587848,
+        "hi": 0.015681391628189045,
+        "spans_zero": false
+      },
+      "nCRPS": {
+        "n": 97,
+        "delta": 0.002847974440506218,
+        "lo": -0.0035718643979342213,
+        "hi": 0.008718983532932767,
+        "spans_zero": true
+      }
+    },
+    "detector-off-seed42-soup vs shipped-seed43-soup": {
+      "nGMASE": {
+        "n": 97,
+        "delta": 0.006947687005925518,
+        "lo": -0.0009951870987445766,
+        "hi": 0.015129463333735327,
+        "spans_zero": true
+      },
+      "nCRPS": {
+        "n": 97,
+        "delta": 0.004697938687702963,
+        "lo": -0.0014347156898130153,
+        "hi": 0.011067459387401946,
+        "spans_zero": true
+      }
+    },
+    "detector-off-seed42-soup vs shipped-seed44-soup": {
+      "nGMASE": {
+        "n": 97,
+        "delta": 0.006701293150148335,
+        "lo": -0.0015572577420938094,
+        "hi": 0.015555746301279538,
+        "spans_zero": true
+      },
+      "nCRPS": {
+        "n": 97,
+        "delta": 0.005060536601604437,
+        "lo": -0.0008106079361679397,
+        "hi": 0.011095995408624382,
+        "spans_zero": true
+      }
+    },
+    "shipped-seed42-soup vs shipped-seed43-soup": {
+      "nGMASE": {
+        "n": 97,
+        "delta": -0.000618429573130852,
+        "lo": -0.005469647246690412,
+        "hi": 0.004517745834084597,
+        "spans_zero": true
+      },
+      "nCRPS": {
+        "n": 97,
+        "delta": 0.0018499642471967448,
+        "lo": -0.0049678815235002505,
+        "hi": 0.010727199569779633,
+        "spans_zero": true
+      }
+    },
+    "shipped-seed42-soup vs shipped-seed44-soup": {
+      "nGMASE": {
+        "n": 97,
+        "delta": -0.0008648234289080348,
+        "lo": -0.005313585525190012,
+        "hi": 0.0037185553932080895,
+        "spans_zero": true
+      },
+      "nCRPS": {
+        "n": 97,
+        "delta": 0.0022125621610982193,
+        "lo": -0.0037777638634529653,
+        "hi": 0.0105674015951992,
+        "spans_zero": true
+      }
+    },
+    "shipped-seed43-soup vs shipped-seed44-soup": {
+      "nGMASE": {
+        "n": 97,
+        "delta": -0.00024639385577718276,
+        "lo": -0.004863890837650375,
+        "hi": 0.0038702515041083574,
+        "spans_zero": true
+      },
+      "nCRPS": {
+        "n": 97,
+        "delta": 0.00036259791390147456,
+        "lo": -0.004859373633461894,
+        "hi": 0.004954297987408873,
+        "spans_zero": true
+      }
+    }
+  },
+  "band_contrasts": {
+    "detector-off-seed42-soup vs shipped-seed42-soup": {
+      "sub_hourly": {
+        "metric": "nGMASE",
+        "n": 36,
+        "delta": 0.015849592897412945,
+        "lo": 0.00316345205151336,
+        "hi": 0.032589296196900874,
+        "spans_zero": false
+      },
+      "hourly": {
+        "metric": "nGMASE",
+        "n": 31,
+        "delta": 0.00477047535336661,
+        "lo": -0.004331634550766017,
+        "hi": 0.013531399423795998,
+        "spans_zero": true
+      },
+      "daily_or_coarser": {
+        "metric": "nGMASE",
+        "n": 30,
+        "delta": 0.000623358458863077,
+        "lo": -0.01643771941598271,
+        "hi": 0.01548274176007125,
+        "spans_zero": true
+      }
+    },
+    "detector-off-seed42-soup vs shipped-seed43-soup": {
+      "sub_hourly": {
+        "metric": "nGMASE",
+        "n": 36,
+        "delta": 0.011910464241472463,
+        "lo": 0.00010953866909024779,
+        "hi": 0.027190136835468115,
+        "spans_zero": false
+      },
+      "hourly": {
+        "metric": "nGMASE",
+        "n": 31,
+        "delta": 0.0022625672158527177,
+        "lo": -0.007185486783494066,
+        "hi": 0.010901142437550249,
+        "spans_zero": true
+      },
+      "daily_or_coarser": {
+        "metric": "nGMASE",
+        "n": 30,
+        "delta": 0.006035556794511954,
+        "lo": -0.014464160874880672,
+        "hi": 0.023377982817866738,
+        "spans_zero": true
+      }
+    },
+    "detector-off-seed42-soup vs shipped-seed44-soup": {
+      "sub_hourly": {
+        "metric": "nGMASE",
+        "n": 36,
+        "delta": 0.015225461834589171,
+        "lo": 0.0017131678223215596,
+        "hi": 0.033109175219391274,
+        "spans_zero": false
+      },
+      "hourly": {
+        "metric": "nGMASE",
+        "n": 31,
+        "delta": -0.00012843420465447064,
+        "lo": -0.008344353327268017,
+        "hi": 0.007529960630547672,
+        "spans_zero": true
+      },
+      "daily_or_coarser": {
+        "metric": "nGMASE",
+        "n": 30,
+        "delta": 0.0037973085701960008,
+        "lo": -0.0170509461062871,
+        "hi": 0.02139506305593486,
+        "spans_zero": true
+      }
+    },
+    "shipped-seed42-soup vs shipped-seed43-soup": {
+      "sub_hourly": {
+        "metric": "nGMASE",
+        "n": 36,
+        "delta": -0.0039391286559404826,
+        "lo": -0.008352411981836116,
+        "hi": 0.00024627341754701604,
+        "spans_zero": true
+      },
+      "hourly": {
+        "metric": "nGMASE",
+        "n": 31,
+        "delta": -0.0025079081375138923,
+        "lo": -0.011151927228212566,
+        "hi": 0.004647245729700877,
+        "spans_zero": true
+      },
+      "daily_or_coarser": {
+        "metric": "nGMASE",
+        "n": 30,
+        "delta": 0.005412198335648877,
+        "lo": -0.007051016111603747,
+        "hi": 0.01924173561256426,
+        "spans_zero": true
+      }
+    },
+    "shipped-seed42-soup vs shipped-seed44-soup": {
+      "sub_hourly": {
+        "metric": "nGMASE",
+        "n": 36,
+        "delta": -0.000624131062823774,
+        "lo": -0.004946637570907075,
+        "hi": 0.0033929119355134985,
+        "spans_zero": true
+      },
+      "hourly": {
+        "metric": "nGMASE",
+        "n": 31,
+        "delta": -0.004898909558021081,
+        "lo": -0.011669321759592566,
+        "hi": 0.001500164551577421,
+        "spans_zero": true
+      },
+      "daily_or_coarser": {
+        "metric": "nGMASE",
+        "n": 30,
+        "delta": 0.003173950111332924,
+        "lo": -0.008211691594944392,
+        "hi": 0.014930294750241768,
+        "spans_zero": true
+      }
+    },
+    "shipped-seed43-soup vs shipped-seed44-soup": {
+      "sub_hourly": {
+        "metric": "nGMASE",
+        "n": 36,
+        "delta": 0.0033149975931167086,
+        "lo": -0.0013239123358702587,
+        "hi": 0.00861355868837499,
+        "spans_zero": true
+      },
+      "hourly": {
+        "metric": "nGMASE",
+        "n": 31,
+        "delta": -0.0023910014205071883,
+        "lo": -0.007962972064395557,
+        "hi": 0.0036227896222095213,
+        "spans_zero": true
+      },
+      "daily_or_coarser": {
+        "metric": "nGMASE",
+        "n": 30,
+        "delta": -0.002238248224315953,
+        "lo": -0.014590570005981629,
+        "hi": 0.008225747659285076,
+        "spans_zero": true
+      }
+    }
+  }
+}

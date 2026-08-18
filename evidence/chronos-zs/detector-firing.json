@@ -1,0 +1,201 @@
+{
+ "benchmark": "chronos-zs",
+ "metric": "MASE normalized to seasonal naive",
+ "aggregate_raw": {
+  "ngmase": 1.4702488112613998,
+  "gwql": 0.1054313184313066
+ },
+ "aggregate_normalized_ngmase": 0.88,
+ "n_tasks": 27,
+ "bands_all_tasks": {
+  ">0.90": {
+   "n": 4,
+   "gmetric": 0.7771
+  },
+  "0.50-0.90": {
+   "n": 3,
+   "gmetric": 0.8373
+  },
+  "<0.50": {
+   "n": 20,
+   "gmetric": 0.9088
+  }
+ },
+ "controlled_cyclic_only": {
+  "n_cyclic": 17,
+  "n_high": 6,
+  "n_low": 11,
+  "gmetric_high": 0.866,
+  "gmetric_low": 0.8841,
+  "gap": 0.0181,
+  "ci95": [
+   -0.1407,
+   0.1696
+  ],
+  "excludes_zero": false
+ },
+ "per_task": {
+  "ETTh": {
+   "n_mase": 0.866007,
+   "firing_rate": 0.964286,
+   "seasonality": 24.0,
+   "n_period_rows": 14
+  },
+  "ETTm": {
+   "n_mase": 0.640458,
+   "firing_rate": 1.0,
+   "seasonality": 96.0,
+   "n_period_rows": 14
+  },
+  "dominick": {
+   "n_mase": 1.505757,
+   "firing_rate": 0.206284,
+   "seasonality": 1.0,
+   "n_period_rows": 100014
+  },
+  "ercot": {
+   "n_mase": 1.066498,
+   "firing_rate": 0.65625,
+   "seasonality": 24.0,
+   "n_period_rows": 8
+  },
+  "exchange_rate": {
+   "n_mase": 1.084588,
+   "firing_rate": 0.5625,
+   "seasonality": 5.0,
+   "n_period_rows": 8
+  },
+  "m4_quarterly": {
+   "n_mase": 0.877124,
+   "firing_rate": 0.020677,
+   "seasonality": 4.0,
+   "n_period_rows": 24000
+  },
+  "m4_yearly": {
+   "n_mase": 0.931002,
+   "firing_rate": 0.001076,
+   "seasonality": 1.0,
+   "n_period_rows": 23000
+  },
+  "m5": {
+   "n_mase": 0.68307,
+   "firing_rate": 0.487561,
+   "seasonality": 1.0,
+   "n_period_rows": 30490
+  },
+  "monash_australian_electricity": {
+   "n_mase": 0.874883,
+   "firing_rate": 1.0,
+   "seasonality": 48.0,
+   "n_period_rows": 5
+  },
+  "monash_car_parts": {
+   "n_mase": 0.901876,
+   "firing_rate": 0.0,
+   "seasonality": 12.0,
+   "n_period_rows": 2674
+  },
+  "monash_cif_2016": {
+   "n_mase": 0.854502,
+   "firing_rate": 0.0,
+   "seasonality": 12.0,
+   "n_period_rows": 72
+  },
+  "monash_covid_deaths": {
+   "n_mase": 0.944844,
+   "firing_rate": 0.008459,
+   "seasonality": 1.0,
+   "n_period_rows": 266
+  },
+  "monash_fred_md": {
+   "n_mase": 0.572771,
+   "firing_rate": 0.352804,
+   "seasonality": 12.0,
+   "n_period_rows": 107
+  },
+  "monash_hospital": {
+   "n_mase": 0.884206,
+   "firing_rate": 0.000978,
+   "seasonality": 12.0,
+   "n_period_rows": 767
+  },
+  "monash_m1_monthly": {
+   "n_mase": 0.889728,
+   "firing_rate": 0.005267,
+   "seasonality": 12.0,
+   "n_period_rows": 617
+  },
+  "monash_m1_quarterly": {
+   "n_mase": 0.919001,
+   "firing_rate": 0.0,
+   "seasonality": 4.0,
+   "n_period_rows": 203
+  },
+  "monash_m1_yearly": {
+   "n_mase": 0.86276,
+   "firing_rate": 0.0,
+   "seasonality": 1.0,
+   "n_period_rows": 181
+  },
+  "monash_m3_monthly": {
+   "n_mase": 0.787806,
+   "firing_rate": 0.008053,
+   "seasonality": 12.0,
+   "n_period_rows": 1428
+  },
+  "monash_m3_quarterly": {
+   "n_mase": 0.973034,
+   "firing_rate": 0.0,
+   "seasonality": 4.0,
+   "n_period_rows": 756
+  },
+  "monash_m3_yearly": {
+   "n_mase": 0.929055,
+   "firing_rate": 0.0,
+   "seasonality": 1.0,
+   "n_period_rows": 645
+  },
+  "monash_nn5_weekly": {
+   "n_mase": 0.96857,
+   "firing_rate": 0.002252,
+   "seasonality": 1.0,
+   "n_period_rows": 111
+  },
+  "monash_tourism_monthly": {
+   "n_mase": 0.986069,
+   "firing_rate": 0.132514,
+   "seasonality": 12.0,
+   "n_period_rows": 366
+  },
+  "monash_tourism_quarterly": {
+   "n_mase": 1.218931,
+   "firing_rate": 0.015808,
+   "seasonality": 4.0,
+   "n_period_rows": 427
+  },
+  "monash_tourism_yearly": {
+   "n_mase": 1.007617,
+   "firing_rate": 0.0,
+   "seasonality": 1.0,
+   "n_period_rows": 518
+  },
+  "monash_traffic": {
+   "n_mase": 0.751675,
+   "firing_rate": 0.976508,
+   "seasonality": 24.0,
+   "n_period_rows": 862
+  },
+  "monash_weather": {
+   "n_mase": 0.80996,
+   "firing_rate": 0.459801,
+   "seasonality": 1.0,
+   "n_period_rows": 3010
+  },
+  "nn5": {
+   "n_mase": 0.507474,
+   "firing_rate": 0.822072,
+   "seasonality": 1.0,
+   "n_period_rows": 111
+  }
+ }
+}

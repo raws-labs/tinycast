@@ -1,0 +1,100 @@
+{
+  "_what": "Paired bootstrap contrast, detector-off retrain (arm 1) against the shipped causal model scored from last.ckpt, on all 97 GIFT-Eval configurations. Positive = detector-off worse.",
+  "_reducer": "compare_ablation_arms.py, from the research repository",
+  "_normalizer": "../deployed/seasonal-naive.csv",
+  "arm": {
+    "name": "detector-off-seed42",
+    "csv": "detector-off-seed42.csv"
+  },
+  "baseline": {
+    "name": "shipped-seed42-last",
+    "csv": "shipped-seed42-last.csv"
+  },
+  "n_paired_configs": 97,
+  "bootstrap": {
+    "B": 10000,
+    "seed": 0,
+    "unit": "configuration",
+    "interval": "percentile, 95%"
+  },
+  "levels": {
+    "detector-off-seed42": {
+      "nGMASE": 0.7793163899479121,
+      "nCRPS": 0.5463244439343153,
+      "bands": {
+        "sub_hourly": {
+          "n": 36,
+          "nGMASE": 0.7926130315166217
+        },
+        "hourly": {
+          "n": 31,
+          "nGMASE": 0.7605030319460935
+        },
+        "daily_or_coarser": {
+          "n": 30,
+          "nGMASE": 0.7831835452497532
+        }
+      }
+    },
+    "shipped-seed42-last": {
+      "nGMASE": 0.7746512573438199,
+      "nCRPS": 0.5455782961687298,
+      "bands": {
+        "sub_hourly": {
+          "n": 36,
+          "nGMASE": 0.7822511901736476
+        },
+        "hourly": {
+          "n": 31,
+          "nGMASE": 0.7520132947171868
+        },
+        "daily_or_coarser": {
+          "n": 30,
+          "nGMASE": 0.7894566654255497
+        }
+      }
+    }
+  },
+  "contrasts": {
+    "nGMASE": {
+      "n": 97,
+      "delta": 0.0046651326040921814,
+      "lo": -0.0032641098272595537,
+      "hi": 0.012760885276990042,
+      "spans_zero": true
+    },
+    "nCRPS": {
+      "n": 97,
+      "delta": 0.0007461477655855697,
+      "lo": -0.006749033173755858,
+      "hi": 0.0073810368690022665,
+      "spans_zero": true
+    }
+  },
+  "band_contrasts": {
+    "sub_hourly": {
+      "metric": "nGMASE",
+      "n": 36,
+      "delta": 0.01036184134297402,
+      "lo": -0.0011756622004697181,
+      "hi": 0.02542805701901596,
+      "spans_zero": true
+    },
+    "hourly": {
+      "metric": "nGMASE",
+      "n": 31,
+      "delta": 0.008489737228906669,
+      "lo": -0.00301214400408667,
+      "hi": 0.019742393770072586,
+      "spans_zero": true
+    },
+    "daily_or_coarser": {
+      "metric": "nGMASE",
+      "n": 30,
+      "delta": -0.006273120175796509,
+      "lo": -0.024988331894158167,
+      "hi": 0.009419996830704158,
+      "spans_zero": true
+    }
+  }
+}

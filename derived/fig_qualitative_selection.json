@@ -1,0 +1,129 @@
+{
+ "rule": "domain",
+ "window_rule": "median per-window MAE of the 0.5 quantile",
+ "display_rule": "x-range in cycles of the shortest significant Fisher period: 3 of history, at most 6 of horizon; untruncated where no period is significant. Display only -- scoring uses the full horizon.",
+ "reference_rule": "seasonal naive, gluonts SeasonalNaivePredictor with season_length = get_seasonality(freq) and last-value imputation -- the same forecaster nGMASE divides by; `season_length` per panel below",
+ "source": "per-window quantile forecasts at the headline host profile, with sign symmetrization and canonical-period alignment",
+ "panels": [
+  {
+   "config": "m4_hourly/H/short",
+   "window": 384,
+   "domain": "Econ/Fin",
+   "freq": "H",
+   "term": "short",
+   "score": 0.8566961446918779,
+   "ds_name": "m4_hourly",
+   "shown_horizon": 48,
+   "display_period": 24.0,
+   "season_length": 24
+  },
+  {
+   "config": "electricity/H/medium",
+   "window": 624,
+   "domain": "Energy",
+   "freq": "H",
+   "term": "medium",
+   "score": 0.8290982237590695,
+   "ds_name": "electricity/H",
+   "shown_horizon": 96,
+   "display_period": 12.0,
+   "season_length": 24
+  },
+  {
+   "config": "solar/H/long",
+   "window": 159,
+   "domain": "Energy",
+   "freq": "H",
+   "term": "long",
+   "score": 0.9475038437348166,
+   "ds_name": "solar/H",
+   "shown_horizon": 144,
+   "display_period": 24.0,
+   "season_length": 24
+  },
+  {
+   "config": "covid_deaths/D/short",
+   "window": 18,
+   "domain": "Healthcare",
+   "freq": "D",
+   "term": "short",
+   "score": 0.9136257002602176,
+   "ds_name": "covid_deaths",
+   "shown_horizon": 30,
+   "display_period": null,
+   "season_length": 1
+  },
+  {
+   "config": "kdd_cup_2018/H/short",
+   "window": 2166,
+   "domain": "Nature",
+   "freq": "H",
+   "term": "short",
+   "score": 0.7605284451763444,
+   "ds_name": "kdd_cup_2018_with_missing/H",
+   "shown_horizon": 48,
+   "display_period": 293.0,
+   "season_length": 24
+  },
+  {
+   "config": "jena_weather/10T/long",
+   "window": 5,
+   "domain": "Nature",
+   "freq": "10T",
+   "term": "long",
+   "score": 0.8375487931077055,
+   "ds_name": "jena_weather/10T",
+   "shown_horizon": 300,
+   "display_period": 1024.0,
+   "season_length": 144
+  },
+  {
+   "config": "restaurant/D/short",
+   "window": 264,
+   "domain": "Sales",
+   "freq": "D",
+   "term": "short",
+   "score": 0.7097420394565415,
+   "ds_name": "restaurant",
+   "shown_horizon": 30,
+   "display_period": 128.0,
+   "season_length": 1
+  },
+  {
+   "config": "loop_seattle/H/short",
+   "window": 2664,
+   "domain": "Transport",
+   "freq": "H",
+   "term": "short",
+   "score": 0.684200439738781,
+   "ds_name": "LOOP_SEATTLE/H",
+   "shown_horizon": 48,
+   "display_period": 24.0,
+   "season_length": 24
+  },
+  {
+   "config": "bizitobs_l2c/H/long",
+   "window": 0,
+   "domain": "Web/CloudOps",
+   "freq": "H",
+   "term": "long",
+   "score": 0.49542542601018397,
+   "ds_name": "bizitobs_l2c/H",
+   "shown_horizon": 300,
+   "display_period": 171.0,
+   "season_length": 24
+  },
+  {
+   "config": "bizitobs_service/10S/medium",
+   "window": 1,
+   "domain": "Web/CloudOps",
+   "freq": "10S",
+   "term": "medium",
+   "score": 0.9744270803599708,
+   "ds_name": "bizitobs_service",
+   "shown_horizon": 300,
+   "display_period": 341.0,
+   "season_length": 360
+  }
+ ]
+}

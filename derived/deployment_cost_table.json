@@ -1,0 +1,121 @@
+{
+ "core_call": {
+  "definition": "re-encode an L=2048 context and decode one 48-step block",
+  "encoder_mac_per_position": 166656,
+  "encoder_mac": 341311488,
+  "decoder_mac_per_step": 47360,
+  "future_conv_stack_mac": 17504256,
+  "decoder_and_future_conv_mac": 19777536,
+  "total_mac": 361089024,
+  "encoder_share": 0.9452,
+  "parameters": 146505,
+  "mac_per_parameter_per_call": 2465,
+  "board_core_call_seconds": 4.08,
+  "board_mac_per_second": 88502212,
+  "host_profile_mac_two_core_calls": 722178048
+ },
+ "flash_limit_bytes": 2097152,
+ "int8_weight_byte_convention": "one byte per learned scalar, applied to every model alike; the deployed firmware packs 141,440 bytes because its 5,065 biases and normalization scalars are carried at higher precision",
+ "shape_sources_fetched": "2026-07-30",
+ "census": [
+  {
+   "model": "TinyCast (ours)",
+   "parameters": 146505,
+   "int8_weight_bytes": 146505,
+   "int8_weight_kib": 143.1,
+   "fits_2mib_flash": true,
+   "context_length": "2048",
+   "patch_stride": "none (per step)",
+   "tokens_per_encoder_pass": "2048",
+   "shape_source": "this paper, Table 1"
+  },
+  {
+   "model": "Reverso-Nano",
+   "parameters": 200000,
+   "int8_weight_bytes": 200000,
+   "int8_weight_kib": 195.3,
+   "fits_2mib_flash": true,
+   "context_length": "2048",
+   "patch_stride": "none (per step)",
+   "tokens_per_encoder_pass": "2048",
+   "shape_source": "checkpoints/reverso_nano/args.json: seq_len 2048, input_token_len 2048, d_model 32, e_layers 2"
+  },
+  {
+   "model": "Reverso-Small",
+   "parameters": 550161,
+   "int8_weight_bytes": 550161,
+   "int8_weight_kib": 537.3,
+   "fits_2mib_flash": true,
+   "context_length": "2048",
+   "patch_stride": "none (per step)",
+   "tokens_per_encoder_pass": "2048",
+   "shape_source": "checkpoints/reverso_small/args.json: d_model 64, e_layers 4"
+  },
+  {
+   "model": "TTM-R3-PT",
+   "parameters": 1414514,
+   "int8_weight_bytes": 1414514,
+   "int8_weight_kib": 1381.4,
+   "fits_2mib_flash": true,
+   "context_length": "512",
+   "patch_stride": "9 (trend branch 64)",
+   "tokens_per_encoder_pass": "57 + 8",
+   "shape_source": "ibm-research/ttm-r3 config.json: context_length 512, patch_length/stride 9, trend_patch_length/stride 64, num_layers 10, d_model 128"
+  },
+  {
+   "model": "Reverso",
+   "parameters": 2600000,
+   "int8_weight_bytes": 2600000,
+   "int8_weight_kib": 2539.1,
+   "fits_2mib_flash": false,
+   "context_length": "2048",
+   "patch_stride": "none (per step)",
+   "tokens_per_encoder_pass": "2048",
+   "shape_source": "checkpoints/reverso/args.json: d_model 128, e_layers 8"
+  },
+  {
+   "model": "Toto-2.0-4m",
+   "parameters": 4144448,
+   "int8_weight_bytes": 4144448,
+   "int8_weight_kib": 4047.3,
+   "fits_2mib_flash": false,
+   "context_length": "4096 (harness default)",
+   "patch_stride": "32",
+   "tokens_per_encoder_pass": "128",
+   "shape_source": "Datadog/Toto-2.0-4m config.json patch_size 32, d_model 256, num_layers 4; leaderboard notebook toto_2_0.ipynb DEFAULT_CONTEXT_LENGTH = 4096"
+  },
+  {
+   "model": "YingLong-6m",
+   "parameters": 7319566,
+   "int8_weight_bytes": 7319566,
+   "int8_weight_kib": 7148.0,
+   "fits_2mib_flash": false,
+   "context_length": "8224 (block_size)",
+   "patch_stride": "32",
+   "tokens_per_encoder_pass": "unknown (data dependent)",
+   "shape_source": "qcw2333/YingLong_6m config.json: block_size 8224, patch_size 32, n_embd 256, n_layer 6; leaderboard notebook truncates to 4096*16 samples"
+  },
+  {
+   "model": "FlowState-9.1M",
+   "parameters": 9069312,
+   "int8_weight_bytes": 9069312,
+   "int8_weight_kib": 8856.8,
+   "fits_2mib_flash": false,
+   "context_length": "2048",
+   "patch_stride": "none (per step)",
+   "tokens_per_encoder_pass": "2048",
+   "shape_source": "ibm-research/flowstate config.json: context_length 2048, encoder_num_layers 6, encoder_state_dim 512, decoder_patch_len 24"
+  },
+  {
+   "model": "Kairos-10m",
+   "parameters": 9945477,
+   "int8_weight_bytes": 9945477,
+   "int8_weight_kib": 9712.4,
+   "fits_2mib_flash": false,
+   "context_length": "2048",
+   "patch_stride": "128",
+   "tokens_per_encoder_pass": "16",
+   "shape_source": "mldi-lab/Kairos_10m config.json: context_length 2048, input_patch_size/stride 128, d_model 256, num_layers 4 + num_decoder_layers 4; leaderboard notebook pads/truncates to 2048"
+  }
+ ]
+}

@@ -1,0 +1,40 @@
+{
+ "_what": "How the two exclusion lists of corpus_exclusions.json resolve against the GIFT-Eval-Pretrain snapshot the deployed run actually cached.",
+ "snapshot": {
+  "repo": "Salesforce/GiftEvalPretrain",
+  "revision": "6830b624de7ed2b3d3e5b85bb6959d81dcc5d874",
+  "top_level_directories": 71,
+  "data_files": 309
+ },
+ "resolution": {
+  "matched_on": "the corpus directory's top-level name",
+  "benchmark_overlap": {
+   "names": 20,
+   "resolve_to_a_directory": 0,
+   "_why": "GIFT-Eval-Pretrain is published already disjoint from the GIFT-Eval test set, so none of the 20 names is a directory in it."
+  },
+  "gridded_weather": {
+   "names": 66,
+   "resolve_to_a_directory": 2,
+   "directories": [
+    "cmip6_1850",
+    "era5_1989"
+   ],
+   "data_files_removed": 3,
+   "_why": "The full grids were never downloaded; only these carry any data in this snapshot."
+  }
+ },
+ "after_exclusions": {
+  "directories_kept": 69,
+  "data_files_kept": 306,
+  "reproduces": "the cache build log, 'Salesforce/GiftEvalPretrain: 306 files after exclusions'"
+ },
+ "realized_datasets": {
+  "gift_eval_pretrain": 54,
+  "chronos_kernelsynth": 1,
+  "total_dataset_keys": 59,
+  "reproduces": "the training log, '[band-balance] ON: 59 datasets reweighted to GE bands'",
+  "_source": "the cached dataset-name list of GIFT-Eval-Pretrain, 54 entries, plus the Chronos KernelSynth cache and the four synthetic shards the launch recipe links",
+  "synthetic_shards": 4
+ }
+}

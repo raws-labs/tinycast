@@ -1,0 +1,1051 @@
+{
+ "tasks": {
+  "proenfo_gfc12": {
+   "eval_metric": "SQL",
+   "test_error": 1.1647484247088786,
+   "multivariate": false,
+   "covariates": true,
+   "mase": 1.4394845886250849,
+   "wql": 0.10000868312389746,
+   "sql": 1.1647484247088786,
+   "wape": 0.12376813696638138
+  },
+  "proenfo_gfc14": {
+   "eval_metric": "SQL",
+   "test_error": 1.40565922888058,
+   "multivariate": false,
+   "covariates": true,
+   "mase": 1.7248436141807477,
+   "wql": 0.06939066117400568,
+   "sql": 1.40565922888058,
+   "wape": 0.08504622222989713
+  },
+  "proenfo_gfc17": {
+   "eval_metric": "SQL",
+   "test_error": 1.25188601731493,
+   "multivariate": false,
+   "covariates": true,
+   "mase": 1.5771960595581969,
+   "wql": 0.08499033693469253,
+   "sql": 1.25188601731493,
+   "wape": 0.10641693584107167
+  },
+  "rohlik_sales_1D": {
+   "eval_metric": "SQL",
+   "test_error": 1.2085846658305461,
+   "multivariate": false,
+   "covariates": true,
+   "mase": 1.4502422253749618,
+   "wql": 0.3305781476706375,
+   "sql": 1.2085846658305461,
+   "wape": 0.3964284733330372
+  },
+  "rohlik_orders_1D": {
+   "eval_metric": "SQL",
+   "test_error": 1.2509463150054496,
+   "multivariate": false,
+   "covariates": true,
+   "mase": 1.5070353326942856,
+   "wql": 0.056597574239847494,
+   "sql": 1.2509463150054496,
+   "wape": 0.06821305156701692
+  },
+  "rohlik_sales_1W": {
+   "eval_metric": "SQL",
+   "test_error": 1.5541676340915016,
+   "multivariate": false,
+   "covariates": true,
+   "mase": 1.8795419989201156,
+   "wql": 0.24657831038927325,
+   "sql": 1.5541676340915016,
+   "wape": 0.2986721387739395
+  },
+  "rohlik_orders_1W": {
+   "eval_metric": "SQL",
+   "test_error": 1.6968029688167667,
+   "multivariate": false,
+   "covariates": true,
+   "mase": 1.9343872823838901,
+   "wql": 0.05654682198326122,
+   "sql": 1.6968029688167667,
+   "wape": 0.06375836641346969
+  },
+  "entsoe_15T": {
+   "eval_metric": "SQL",
+   "test_error": 0.593902231828437,
+   "multivariate": false,
+   "covariates": true,
+   "mase": 0.7423827219036027,
+   "wql": 0.04255097479427826,
+   "sql": 0.593902231828437,
+   "wape": 0.05381948764026191
+  },
+  "entsoe_30T": {
+   "eval_metric": "SQL",
+   "test_error": 0.659505355390257,
+   "multivariate": false,
+   "covariates": true,
+   "mase": 0.833193446157695,
+   "wql": 0.04524141873896094,
+   "sql": 0.659505355390257,
+   "wape": 0.0558259184053145
+  },
+  "entsoe_1H": {
+   "eval_metric": "SQL",
+   "test_error": 0.8920739638721512,
+   "multivariate": false,
+   "covariates": true,
+   "mase": 1.0958885917174812,
+   "wql": 0.0646611378574318,
+   "sql": 0.8920739638721512,
+   "wape": 0.0792256400041759
+  },
+  "epf_be": {
+   "eval_metric": "SQL",
+   "test_error": 0.6354173323492794,
+   "multivariate": false,
+   "covariates": true,
+   "mase": 0.7891039322010852,
+   "wql": 0.1146355409689747,
+   "sql": 0.6354173323492794,
+   "wape": 0.1432726634069192
+  },
+  "epf_de": {
+   "eval_metric": "SQL",
+   "test_error": 1.0785217486757595,
+   "multivariate": false,
+   "covariates": true,
+   "mase": 1.3545824057834472,
+   "wql": 0.4687405063369144,
+   "sql": 1.0785217486757595,
+   "wape": 0.5891120115335149
+  },
+  "epf_fr": {
+   "eval_metric": "SQL",
+   "test_error": 0.5213890994845359,
+   "multivariate": false,
+   "covariates": true,
+   "mase": 0.6177750101576824,
+   "wql": 0.08109614180486716,
+   "sql": 0.5213890994845359,
+   "wape": 0.0958330880754191
+  },
+  "epf_np": {
+   "eval_metric": "SQL",
+   "test_error": 1.1200389623790556,
+   "multivariate": false,
+   "covariates": true,
+   "mase": 1.412561041965759,
+   "wql": 0.04981197277468019,
+   "sql": 1.1200389623790556,
+   "wape": 0.06299962283261053
+  },
+  "epf_pjm": {
+   "eval_metric": "SQL",
+   "test_error": 0.38440109890654345,
+   "multivariate": false,
+   "covariates": true,
+   "mase": 0.4702977418494406,
+   "wql": 0.06736300937214122,
+   "sql": 0.38440109890654345,
+   "wape": 0.08216164653430844
+  },
+  "rossmann_1D": {
+   "eval_metric": "SQL",
+   "test_error": 0.5520500478371054,
+   "multivariate": false,
+   "covariates": true,
+   "mase": 0.6774380322082065,
+   "wql": 0.18732451797911084,
+   "sql": 0.5520500478371054,
+   "wape": 0.23034710887370902
+  },
+  "rossmann_1W": {
+   "eval_metric": "SQL",
+   "test_error": 0.551780240638206,
+   "multivariate": false,
+   "covariates": true,
+   "mase": 0.7429358279361581,
+   "wql": 0.1505425950571215,
+   "sql": 0.551780240638206,
+   "wape": 0.20373916468367653
+  },
+  "restaurant": {
+   "eval_metric": "SQL",
+   "test_error": 0.7017137514348931,
+   "multivariate": false,
+   "covariates": true,
+   "mase": 0.8812065287749371,
+   "wql": 0.2947640485405003,
+   "sql": 0.7017137514348931,
+   "wape": 0.37391786183261067
+  },
+  "hermes": {
+   "eval_metric": "SQL",
+   "test_error": 0.8849156496672668,
+   "multivariate": false,
+   "covariates": true,
+   "mase": 1.1313802265037207,
+   "wql": 0.0035633535333453197,
+   "sql": 0.8849156496672668,
+   "wape": 0.0045419403589146935
+  },
+  "walmart": {
+   "eval_metric": "SQL",
+   "test_error": 0.9723788212513059,
+   "multivariate": false,
+   "covariates": true,
+   "mase": 1.195744959857946,
+   "wql": 0.12220027324323773,
+   "sql": 0.9723788212513059,
+   "wape": 0.148179033781393
+  },
+  "m5_1D": {
+   "eval_metric": "SQL",
+   "test_error": 0.7655372239518725,
+   "multivariate": false,
+   "covariates": true,
+   "mase": 0.9250470483865275,
+   "wql": 0.5814010895060229,
+   "sql": 0.7655372239518725,
+   "wape": 0.7295377439318969
+  },
+  "m5_1W": {
+   "eval_metric": "SQL",
+   "test_error": 0.914310912095457,
+   "multivariate": false,
+   "covariates": true,
+   "mase": 1.149851953310636,
+   "wql": 0.34009319786807823,
+   "sql": 0.914310912095457,
+   "wape": 0.4296363138649282
+  },
+  "m5_1M": {
+   "eval_metric": "SQL",
+   "test_error": 1.0014786241330031,
+   "multivariate": false,
+   "covariates": true,
+   "mase": 1.1831436501993629,
+   "wql": 0.3567238630128748,
+   "sql": 1.0014786241330031,
+   "wape": 0.44368290242413105
+  },
+  "hierarchical_sales_1D": {
+   "eval_metric": "SQL",
+   "test_error": 0.5736599763834203,
+   "multivariate": false,
+   "covariates": false,
+   "mase": 0.7064566963600976,
+   "wql": 0.5832437901628198,
+   "sql": 0.5736599763834203,
+   "wape": 0.7095482855649724
+  },
+  "hierarchical_sales_1W": {
+   "eval_metric": "SQL",
+   "test_error": 0.6516563926992767,
+   "multivariate": false,
+   "covariates": false,
+   "mase": 0.7931855062559185,
+   "wql": 0.38145959707567306,
+   "sql": 0.6516563926992767,
+   "wape": 0.4479119689867141
+  },
+  "favorita_stores_1D": {
+   "eval_metric": "SQL",
+   "test_error": 1.0217613723345251,
+   "multivariate": false,
+   "covariates": true,
+   "mase": 1.2524774786848114,
+   "wql": 0.1367350289819697,
+   "sql": 1.0217613723345251,
+   "wape": 0.16746274414180534
+  },
+  "favorita_stores_1W": {
+   "eval_metric": "SQL",
+   "test_error": 2.069545955582037,
+   "multivariate": false,
+   "covariates": true,
+   "mase": 2.5138722742700583,
+   "wql": 0.12924944577950362,
+   "sql": 2.069545955582037,
+   "wape": 0.16345682567826386
+  },
+  "favorita_stores_1M": {
+   "eval_metric": "SQL",
+   "test_error": 1.9163933455485473,
+   "multivariate": false,
+   "covariates": true,
+   "mase": 2.218076207209496,
+   "wql": 0.13959494063600458,
+   "sql": 1.9163933455485473,
+   "wape": 0.18131933208204687
+  },
+  "favorita_transactions_1D": {
+   "eval_metric": "SQL",
+   "test_error": 1.0205413393373237,
+   "multivariate": false,
+   "covariates": true,
+   "mase": 1.1990454369926649,
+   "wql": 0.07938661084158675,
+   "sql": 1.0205413393373237,
+   "wape": 0.09372291928271267
+  },
+  "favorita_transactions_1W": {
+   "eval_metric": "SQL",
+   "test_error": 1.3376696764604532,
+   "multivariate": false,
+   "covariates": true,
+   "mase": 1.653063134490785,
+   "wql": 0.05742343253479878,
+   "sql": 1.3376696764604532,
+   "wape": 0.06752795835612033
+  },
+  "favorita_transactions_1M": {
+   "eval_metric": "SQL",
+   "test_error": 1.3587141092821036,
+   "multivariate": false,
+   "covariates": true,
+   "mase": 1.6681036961014586,
+   "wql": 0.07873256663770696,
+   "sql": 1.3587141092821036,
+   "wape": 0.09291930629734432
+  },
+  "solar_with_weather_15T": {
+   "eval_metric": "SQL",
+   "test_error": 0.8790866114549207,
+   "multivariate": false,
+   "covariates": true,
+   "mase": 1.0728930734106068,
+   "wql": 1.190389660179008,
+   "sql": 0.8790866114549207,
+   "wape": 1.3946172366868939
+  },
+  "solar_with_weather_1H": {
+   "eval_metric": "SQL",
+   "test_error": 0.792013741091868,
+   "multivariate": false,
+   "covariates": true,
+   "mase": 0.9818680409651772,
+   "wql": 0.9823670725459293,
+   "sql": 0.792013741091868,
+   "wape": 1.174839955803972
+  },
+  "solar_1D": {
+   "eval_metric": "SQL",
+   "test_error": 0.6410621766751669,
+   "multivariate": false,
+   "covariates": false,
+   "mase": 0.784530001769757,
+   "wql": 0.2008213982911407,
+   "sql": 0.6410621766751669,
+   "wape": 0.2467137145724378
+  },
+  "solar_1W": {
+   "eval_metric": "SQL",
+   "test_error": 1.4172712887169008,
+   "multivariate": false,
+   "covariates": false,
+   "mase": 1.5949761325956933,
+   "wql": 0.2369815696876644,
+   "sql": 1.4172712887169008,
+   "wape": 0.26748069395586266
+  },
+  "kdd_cup_2022_10T": {
+   "eval_metric": "SQL",
+   "test_error": 0.6142411037100579,
+   "multivariate": false,
+   "covariates": true,
+   "mase": 0.7620636496135621,
+   "wql": 1.9932200294684965,
+   "sql": 0.6142411037100579,
+   "wape": 2.4028285508159875
+  },
+  "kdd_cup_2022_30T": {
+   "eval_metric": "SQL",
+   "test_error": 0.4734543210034182,
+   "multivariate": false,
+   "covariates": true,
+   "mase": 0.5809993752939819,
+   "wql": 1.5181140408034222,
+   "sql": 0.4734543210034182,
+   "wape": 1.7585721657059736
+  },
+  "kdd_cup_2022_1D": {
+   "eval_metric": "SQL",
+   "test_error": 0.7216491461146186,
+   "multivariate": false,
+   "covariates": true,
+   "mase": 0.9325100829575488,
+   "wql": 0.5810862833268797,
+   "sql": 0.7216491461146186,
+   "wape": 0.7516779563093843
+  },
+  "uci_air_quality_1H": {
+   "eval_metric": "SQL",
+   "test_error": 1.0636473106530155,
+   "multivariate": true,
+   "covariates": true,
+   "mase": 1.295490428826145,
+   "wql": 0.35740823744276007,
+   "sql": 1.0636473106530155,
+   "wape": 0.43043431489021033
+  },
+  "uci_air_quality_1D": {
+   "eval_metric": "SQL",
+   "test_error": 1.1744993796097347,
+   "multivariate": true,
+   "covariates": true,
+   "mase": 1.5268909079833988,
+   "wql": 0.2373539584946675,
+   "sql": 1.1744993796097347,
+   "wape": 0.3077314405446437
+  },
+  "LOOP_SEATTLE_5T": {
+   "eval_metric": "SQL",
+   "test_error": 0.6327848421468393,
+   "multivariate": false,
+   "covariates": false,
+   "mase": 0.7703341086318204,
+   "wql": 0.07007186583610805,
+   "sql": 0.6327848421468393,
+   "wape": 0.08538240850754611
+  },
+  "LOOP_SEATTLE_1D": {
+   "eval_metric": "SQL",
+   "test_error": 1.0220134471287823,
+   "multivariate": false,
+   "covariates": false,
+   "mase": 1.1860524755290018,
+   "wql": 0.03773099336601377,
+   "sql": 1.0220134471287823,
+   "wape": 0.044431845411588844
+  },
+  "LOOP_SEATTLE_1H": {
+   "eval_metric": "SQL",
+   "test_error": 0.8976644998718536,
+   "multivariate": false,
+   "covariates": false,
+   "mase": 1.104208477248047,
+   "wql": 0.07850195905298649,
+   "sql": 0.8976644998718536,
+   "wape": 0.09694607870013745
+  },
+  "M_DENSE_1D": {
+   "eval_metric": "SQL",
+   "test_error": 0.9429456870073973,
+   "multivariate": false,
+   "covariates": false,
+   "mase": 1.1380889161969119,
+   "wql": 0.09967858072469526,
+   "sql": 0.9429456870073973,
+   "wape": 0.11880602265138826
+  },
+  "M_DENSE_1H": {
+   "eval_metric": "SQL",
+   "test_error": 1.1683663921682594,
+   "multivariate": false,
+   "covariates": false,
+   "mase": 1.45501139719593,
+   "wql": 0.25118804740288037,
+   "sql": 1.1683663921682594,
+   "wape": 0.3128673044226699
+  },
+  "SZ_TAXI_15T": {
+   "eval_metric": "SQL",
+   "test_error": 0.42117366424071845,
+   "multivariate": false,
+   "covariates": false,
+   "mase": 0.5248789636616482,
+   "wql": 0.20035718096804844,
+   "sql": 0.42117366424071845,
+   "wape": 0.2505257107320754
+  },
+  "SZ_TAXI_1H": {
+   "eval_metric": "SQL",
+   "test_error": 0.5149058034856208,
+   "multivariate": false,
+   "covariates": false,
+   "mase": 0.5944583158997023,
+   "wql": 0.1723846283338124,
+   "sql": 0.5149058034856208,
+   "wape": 0.19839468268425975
+  },
+  "redset_5T": {
+   "eval_metric": "SQL",
+   "test_error": 1.9381515814464574,
+   "multivariate": false,
+   "covariates": true,
+   "mase": 1.9058547669778865,
+   "wql": 0.5557452492974153,
+   "sql": 1.9381515814464574,
+   "wape": 0.5737499452925425
+  },
+  "redset_15T": {
+   "eval_metric": "SQL",
+   "test_error": 1.2793619440788953,
+   "multivariate": false,
+   "covariates": true,
+   "mase": 1.4199344999384376,
+   "wql": 0.2928116406446793,
+   "sql": 1.2793619440788953,
+   "wape": 0.3554483489024228
+  },
+  "redset_1H": {
+   "eval_metric": "SQL",
+   "test_error": 1.3941488962605701,
+   "multivariate": false,
+   "covariates": true,
+   "mase": 1.5005653209815963,
+   "wql": 0.19978737323009021,
+   "sql": 1.3941488962605701,
+   "wape": 0.23820181922440092
+  },
+  "hospital_admissions_1D": {
+   "eval_metric": "SQL",
+   "test_error": 0.5648826104314262,
+   "multivariate": false,
+   "covariates": false,
+   "mase": 0.7286246137790451,
+   "wql": 0.4190990002476475,
+   "sql": 0.5648826104314262,
+   "wape": 0.540609615603891
+  },
+  "hospital_admissions_1W": {
+   "eval_metric": "SQL",
+   "test_error": 0.6108286724238694,
+   "multivariate": false,
+   "covariates": false,
+   "mase": 0.7899126374673295,
+   "wql": 0.1722262937247529,
+   "sql": 0.6108286724238694,
+   "wape": 0.22262094515984132
+  },
+  "ETT_1W": {
+   "eval_metric": "SQL",
+   "test_error": 2.383369192094141,
+   "multivariate": true,
+   "covariates": false,
+   "mase": 2.6914985228758153,
+   "wql": 0.433432289879024,
+   "sql": 2.383369192094141,
+   "wape": 0.506903274358148
+  },
+  "ETT_1D": {
+   "eval_metric": "SQL",
+   "test_error": 1.198238519713898,
+   "multivariate": true,
+   "covariates": false,
+   "mase": 1.397123718983212,
+   "wql": 0.29757353532045244,
+   "sql": 1.198238519713898,
+   "wape": 0.3500335130049231
+  },
+  "ETT_1H": {
+   "eval_metric": "SQL",
+   "test_error": 0.9921892480863521,
+   "multivariate": true,
+   "covariates": false,
+   "mase": 1.2457461127459672,
+   "wql": 0.2107953275350411,
+   "sql": 0.9921892480863521,
+   "wape": 0.2641841067537945
+  },
+  "ETT_15T": {
+   "eval_metric": "SQL",
+   "test_error": 0.6153817534592828,
+   "multivariate": true,
+   "covariates": false,
+   "mase": 0.7725461151559527,
+   "wql": 0.09825294887432197,
+   "sql": 0.6153817534592828,
+   "wape": 0.12401448501574464
+  },
+  "hospital": {
+   "eval_metric": "SQL",
+   "test_error": 0.7207009399907203,
+   "multivariate": false,
+   "covariates": false,
+   "mase": 0.9042630755814969,
+   "wql": 0.07908325261671839,
+   "sql": 0.7207009399907203,
+   "wape": 0.09464469096391928
+  },
+  "jena_weather_10T": {
+   "eval_metric": "SQL",
+   "test_error": 0.42268827885080124,
+   "multivariate": true,
+   "covariates": false,
+   "mase": 0.49167770413785494,
+   "wql": 0.4971677151986742,
+   "sql": 0.42268827885080124,
+   "wape": 0.38378261190572804
+  },
+  "jena_weather_1D": {
+   "eval_metric": "SQL",
+   "test_error": 1.3318515400650774,
+   "multivariate": true,
+   "covariates": false,
+   "mase": 1.5323260181038505,
+   "wql": 0.26290674557965715,
+   "sql": 1.3318515400650774,
+   "wape": 0.31604861624685765
+  },
+  "jena_weather_1H": {
+   "eval_metric": "SQL",
+   "test_error": 0.3985377349879278,
+   "multivariate": true,
+   "covariates": false,
+   "mase": 0.4846046615619605,
+   "wql": 0.24311244641275445,
+   "sql": 0.3985377349879278,
+   "wape": 0.2753287052209587
+  },
+  "bizitobs_l2c_1H": {
+   "eval_metric": "SQL",
+   "test_error": 0.37016419541223666,
+   "multivariate": true,
+   "covariates": false,
+   "mase": 0.4620332696956268,
+   "wql": 0.3285616414150055,
+   "sql": 0.37016419541223666,
+   "wape": 0.4014250235138818
+  },
+  "bizitobs_l2c_5T": {
+   "eval_metric": "SQL",
+   "test_error": 0.6537392637168062,
+   "multivariate": true,
+   "covariates": false,
+   "mase": 0.7587376321535179,
+   "wql": 1.2518682786305504,
+   "sql": 0.6537392637168062,
+   "wape": 1.3175047290461213
+  },
+  "australian_tourism": {
+   "eval_metric": "SQL",
+   "test_error": 1.0089262334451072,
+   "multivariate": false,
+   "covariates": false,
+   "mase": 1.2273324615351484,
+   "wql": 0.1265732015718409,
+   "sql": 1.0089262334451072,
+   "wape": 0.15264728508048592
+  },
+  "world_tourism": {
+   "eval_metric": "SQL",
+   "test_error": 2.787427986442907,
+   "multivariate": false,
+   "covariates": false,
+   "mase": 3.720313759118434,
+   "wql": 0.06703215133919121,
+   "sql": 2.787427986442907,
+   "wape": 0.09727534571242252
+  },
+  "world_co2_emissions": {
+   "eval_metric": "SQL",
+   "test_error": 3.0729449259179376,
+   "multivariate": false,
+   "covariates": false,
+   "mase": 3.779059847037646,
+   "wql": 0.09192378286779562,
+   "sql": 3.0729449259179376,
+   "wape": 0.10265686566079846
+  },
+  "world_life_expectancy": {
+   "eval_metric": "SQL",
+   "test_error": 2.053789366798987,
+   "multivariate": false,
+   "covariates": false,
+   "mase": 2.3501190632812685,
+   "wql": 0.015499006207891384,
+   "sql": 2.053789366798987,
+   "wape": 0.017802705958987374
+  },
+  "ercot_1H": {
+   "eval_metric": "SQL",
+   "test_error": 1.5457189374900042,
+   "multivariate": false,
+   "covariates": false,
+   "mase": 1.9639530588257892,
+   "wql": 0.07909488117120576,
+   "sql": 1.5457189374900042,
+   "wape": 0.10090376007473116
+  },
+  "ercot_1D": {
+   "eval_metric": "SQL",
+   "test_error": 0.8914670160476932,
+   "multivariate": false,
+   "covariates": false,
+   "mase": 1.1225177000114763,
+   "wql": 0.06538445577482724,
+   "sql": 0.8914670160476932,
+   "wape": 0.08313534845764095
+  },
+  "ercot_1W": {
+   "eval_metric": "SQL",
+   "test_error": 1.1630234416341598,
+   "multivariate": false,
+   "covariates": false,
+   "mase": 1.4963554102618972,
+   "wql": 0.05874854255487093,
+   "sql": 1.1630234416341598,
+   "wape": 0.07556930247216326
+  },
+  "ercot_1M": {
+   "eval_metric": "SQL",
+   "test_error": 1.2656076077239258,
+   "multivariate": false,
+   "covariates": false,
+   "mase": 1.3239672269856348,
+   "wql": 0.0689658384500262,
+   "sql": 1.2656076077239258,
+   "wape": 0.06906894250320877
+  },
+  "uk_covid_utla_1D/new": {
+   "eval_metric": "SQL",
+   "test_error": 3.8343326119958214,
+   "multivariate": false,
+   "covariates": false,
+   "mase": 4.53451657180837,
+   "wql": 0.37812322855638614,
+   "sql": 3.8343326119958214,
+   "wape": 0.45737837511509866
+  },
+  "uk_covid_utla_1W/cumulative": {
+   "eval_metric": "SQL",
+   "test_error": 18.440143669531242,
+   "multivariate": false,
+   "covariates": false,
+   "mase": 22.932446901142345,
+   "wql": 0.17720377137392385,
+   "sql": 18.440143669531242,
+   "wape": 0.2218757371828076
+  },
+  "uk_covid_nation_1D/new": {
+   "eval_metric": "SQL",
+   "test_error": 2.0743087488340226,
+   "multivariate": true,
+   "covariates": true,
+   "mase": 2.5340469403917103,
+   "wql": 0.37522964144269133,
+   "sql": 2.0743087488340226,
+   "wape": 0.43318123000302877
+  },
+  "uk_covid_nation_1D/cumulative": {
+   "eval_metric": "SQL",
+   "test_error": 20.628417062515894,
+   "multivariate": true,
+   "covariates": true,
+   "mase": 22.627185939979316,
+   "wql": 0.05842058187462503,
+   "sql": 20.628417062515894,
+   "wape": 0.06207713538482039
+  },
+  "uk_covid_nation_1W/new": {
+   "eval_metric": "SQL",
+   "test_error": 3.48852332161743,
+   "multivariate": true,
+   "covariates": true,
+   "mase": 4.1369559853523,
+   "wql": 0.4132534849258823,
+   "sql": 3.48852332161743,
+   "wape": 0.5067885720922699
+  },
+  "uk_covid_nation_1W/cumulative": {
+   "eval_metric": "SQL",
+   "test_error": 6.2967377813857155,
+   "multivariate": true,
+   "covariates": true,
+   "mase": 8.110233640321276,
+   "wql": 0.056736601151989446,
+   "sql": 6.2967377813857155,
+   "wape": 0.0733483069203199
+  },
+  "ecdc_ili": {
+   "eval_metric": "SQL",
+   "test_error": 2.6178070223739462,
+   "multivariate": false,
+   "covariates": false,
+   "mase": 3.0120728830336865,
+   "wql": 0.4787773905320284,
+   "sql": 2.6178070223739462,
+   "wape": 0.5608384248666858
+  },
+  "boomlet_1062": {
+   "eval_metric": "SQL",
+   "test_error": 0.7327150435913954,
+   "multivariate": true,
+   "covariates": false,
+   "mase": 0.8747258593878249,
+   "wql": 0.5778023659119944,
+   "sql": 0.7327150435913954,
+   "wape": 0.6976953326003581
+  },
+  "boomlet_1209": {
+   "eval_metric": "SQL",
+   "test_error": 1.0618496625022638,
+   "multivariate": true,
+   "covariates": false,
+   "mase": 1.0321040107355404,
+   "wql": 0.4305944712663292,
+   "sql": 1.0618496625022638,
+   "wape": 0.4244561427132991
+  },
+  "boomlet_1225": {
+   "eval_metric": "SQL",
+   "test_error": 0.2004237411038683,
+   "multivariate": true,
+   "covariates": false,
+   "mase": 0.2478714684488203,
+   "wql": 0.10508950762026222,
+   "sql": 0.2004237411038683,
+   "wape": 0.12979666413337942
+  },
+  "boomlet_1230": {
+   "eval_metric": "SQL",
+   "test_error": 1.8437254000786527,
+   "multivariate": true,
+   "covariates": false,
+   "mase": 1.7769029310730677,
+   "wql": 0.43452564303923263,
+   "sql": 1.8437254000786527,
+   "wape": 0.4012402291060371
+  },
+  "boomlet_1282": {
+   "eval_metric": "SQL",
+   "test_error": 0.47723645998416203,
+   "multivariate": true,
+   "covariates": false,
+   "mase": 0.5605315505246606,
+   "wql": 0.32459369343201566,
+   "sql": 0.47723645998416203,
+   "wape": 0.38448863320344007
+  },
+  "boomlet_1487": {
+   "eval_metric": "SQL",
+   "test_error": 1.1837247471304972,
+   "multivariate": true,
+   "covariates": false,
+   "mase": 0.8187975224217656,
+   "wql": 0.4647022046370292,
+   "sql": 1.1837247471304972,
+   "wape": 0.3228715386909224
+  },
+  "boomlet_1631": {
+   "eval_metric": "SQL",
+   "test_error": 0.6147057942026855,
+   "multivariate": true,
+   "covariates": false,
+   "mase": 0.764770153714321,
+   "wql": 0.26719073940006316,
+   "sql": 0.6147057942026855,
+   "wape": 0.3316289530372779
+  },
+  "boomlet_1676": {
+   "eval_metric": "SQL",
+   "test_error": 0.7092720811793066,
+   "multivariate": true,
+   "covariates": false,
+   "mase": 0.8112056528966347,
+   "wql": 0.2803580167485293,
+   "sql": 0.7092720811793066,
+   "wape": 0.34433660516528725
+  },
+  "boomlet_1855": {
+   "eval_metric": "SQL",
+   "test_error": 0.5031082006347962,
+   "multivariate": true,
+   "covariates": false,
+   "mase": 0.5873864887197616,
+   "wql": 0.14962415838335222,
+   "sql": 0.5031082006347962,
+   "wape": 0.17510392729455612
+  },
+  "boomlet_1975": {
+   "eval_metric": "SQL",
+   "test_error": 0.23656102250827704,
+   "multivariate": true,
+   "covariates": false,
+   "mase": 0.2833233640773627,
+   "wql": 0.13436118553564996,
+   "sql": 0.23656102250827704,
+   "wape": 0.16073774961096138
+  },
+  "boomlet_2187": {
+   "eval_metric": "SQL",
+   "test_error": 0.7768256992257767,
+   "multivariate": true,
+   "covariates": false,
+   "mase": 0.8967222837071862,
+   "wql": 0.25367560573151,
+   "sql": 0.7768256992257767,
+   "wape": 0.29228806510346045
+  },
+  "boomlet_285": {
+   "eval_metric": "SQL",
+   "test_error": 0.36436981010224234,
+   "multivariate": true,
+   "covariates": false,
+   "mase": 0.4058828926830049,
+   "wql": 0.15158502882379493,
+   "sql": 0.36436981010224234,
+   "wape": 0.18237580969412587
+  },
+  "boomlet_619": {
+   "eval_metric": "SQL",
+   "test_error": 0.41647659264380354,
+   "multivariate": true,
+   "covariates": false,
+   "mase": 0.5369532872480859,
+   "wql": 0.32188206331495806,
+   "sql": 0.41647659264380354,
+   "wape": 0.4113488311631749
+  },
+  "boomlet_772": {
+   "eval_metric": "SQL",
+   "test_error": 0.3522958449579664,
+   "multivariate": true,
+   "covariates": false,
+   "mase": 0.39933415110521053,
+   "wql": 0.15948045391689838,
+   "sql": 0.3522958449579664,
+   "wape": 0.1832429573528015
+  },
+  "boomlet_963": {
+   "eval_metric": "SQL",
+   "test_error": 0.8371584265484658,
+   "multivariate": true,
+   "covariates": false,
+   "mase": 0.8983505043614729,
+   "wql": 0.37850666775361475,
+   "sql": 0.8371584265484658,
+   "wape": 0.42287689618469476
+  },
+  "fred_md_2025/cee": {
+   "eval_metric": "SQL",
+   "test_error": 4.930873080927805,
+   "multivariate": true,
+   "covariates": true,
+   "mase": 5.176998297244314,
+   "wql": 0.08439754443103878,
+   "sql": 4.930873080927805,
+   "wape": 0.10238582059686616
+  },
+  "fred_qd_2025/cee": {
+   "eval_metric": "SQL",
+   "test_error": 2.7509404167341454,
+   "multivariate": true,
+   "covariates": true,
+   "mase": 3.0176214843727376,
+   "wql": 0.1609243412713175,
+   "sql": 2.7509404167341454,
+   "wape": 0.20117791260656043
+  },
+  "fred_md_2025/macro": {
+   "eval_metric": "SQL",
+   "test_error": 6.69497548367533,
+   "multivariate": true,
+   "covariates": false,
+   "mase": 6.985561433902904,
+   "wql": 0.0761739616778602,
+   "sql": 6.69497548367533,
+   "wape": 0.08621545865629102
+  },
+  "fred_qd_2025/macro": {
+   "eval_metric": "SQL",
+   "test_error": 4.640468859467893,
+   "multivariate": true,
+   "covariates": false,
+   "mase": 5.1589978900502125,
+   "wql": 0.10680027198539924,
+   "sql": 4.640468859467893,
+   "wape": 0.1260426961774615
+  },
+  "us_consumption_1M": {
+   "eval_metric": "SQL",
+   "test_error": 1.7404001786167373,
+   "multivariate": false,
+   "covariates": false,
+   "mase": 2.024294319527262,
+   "wql": 0.02434936809685475,
+   "sql": 1.7404001786167373,
+   "wape": 0.027898501380108704
+  },
+  "us_consumption_1Q": {
+   "eval_metric": "SQL",
+   "test_error": 2.6220007265911778,
+   "multivariate": false,
+   "covariates": false,
+   "mase": 3.129654359634942,
+   "wql": 0.040637020617286926,
+   "sql": 2.6220007265911778,
+   "wape": 0.045982544035869384
+  },
+  "us_consumption_1Y": {
+   "eval_metric": "SQL",
+   "test_error": 4.779043987141004,
+   "multivariate": false,
+   "covariates": false,
+   "mase": 6.049945402223209,
+   "wql": 0.08017861053715494,
+   "sql": 4.779043987141004,
+   "wape": 0.10558358923913272
+  },
+  "gvar": {
+   "eval_metric": "SQL",
+   "test_error": 0.8848824386742647,
+   "multivariate": true,
+   "covariates": true,
+   "mase": 0.8382584050604496,
+   "wql": 0.023718325879292113,
+   "sql": 0.8848824386742647,
+   "wape": 0.02280648725288
+  }
+ },
+ "all": {
+  "n_tasks": 100,
+  "gtest_error": 1.087626685643813,
+  "n_test_error": 100,
+  "gmase": 1.2912967273572487,
+  "n_mase": 100,
+  "gwql": 0.16352089895947766,
+  "n_wql": 100,
+  "gsql": 1.087626685643813,
+  "n_sql": 100
+ },
+ "univariate": {
+  "n_tasks": 28,
+  "gtest_error": 1.3043517478854556,
+  "n_test_error": 28,
+  "gmase": 1.585790027069112,
+  "n_mase": 28,
+  "gwql": 0.11638072101193923,
+  "n_wql": 28,
+  "gsql": 1.3043517478854556,
+  "n_sql": 28
+ },
+ "no_covariates": {
+  "n_tasks": 54,
+  "gtest_error": 1.0071234267731053,
+  "n_test_error": 54,
+  "gmase": 1.183461380131001,
+  "n_mase": 54,
+  "gwql": 0.17101041039889203,
+  "n_wql": 54,
+  "gsql": 1.0071234267731053,
+  "n_sql": 54
+ },
+ "multivariate": {
+  "n_tasks": 35,
+  "gtest_error": 1.0739506217962393,
+  "n_test_error": 35,
+  "gmase": 1.2214753020712412,
+  "n_mase": 35,
+  "gwql": 0.21857601910517152,
+  "n_wql": 35,
+  "gsql": 1.0739506217962393,
+  "n_sql": 35
+ },
+ "_model": "TinyCast-146K",
+ "_ckpt": "the deployed 8-checkpoint soup",
+ "_seconds": 5360.428426265717
+}
