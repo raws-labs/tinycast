@@ -16,6 +16,8 @@ so the model streams in constant memory and quantizes to INT8.
   decoder, nine decile quantile outputs
 - **Streaming:** left-only convolution padding, so per-step inference is exact in constant memory
 - **Weights:** [raws-labs/tinycast](https://huggingface.co/raws-labs/tinycast) on the Hugging Face Hub
+- **Try it:** [interactive demo](https://huggingface.co/spaces/raws-labs/tinycast-forecaster),
+  a Hugging Face Space, no install required
 - **Paper:** [TinyCast: Probabilistic Zero-Shot Forecasting with Computed Periodicity](https://arxiv.org/abs/2608.15767)
 - **License:** Apache-2.0
 
