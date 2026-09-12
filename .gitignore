@@ -31,3 +31,8 @@ __pycache__/
 
 # Generated synthetic corpus shards (tens of gigabytes each).
 /synth4096_*/
+
+# Ignore dotfiles and dotfolders (local tooling state); keep the tracked ones.
+.*
+!.gitignore
+!.github/
